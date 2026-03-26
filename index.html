@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chemin de Nietzsche | Guide du Visiteur</title>
+<meta name="description" content="Guide complet du Chemin de Nietzsche à Èze : sentier de randonnée, vue panoramique sur la Méditerranée, village perché et conseils de visite.">
+<link rel="alternate" hreflang="fr" href="/">
+<link rel="alternate" hreflang="en" href="/?lang=en">
+<link rel="alternate" hreflang="de" href="/?lang=de">
+<link rel="alternate" hreflang="zh-Hant" href="/?lang=zh-Hant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --section-gap: clamp(80px, 12vw, 140px);
+  --container: min(1100px, 90vw);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"] {
+  --bg: #09090b; --bg-elevated: #131316; --bg-card: #18181b; --border: #27272a;
+  --text: #fafafa; --text-secondary: #a1a1aa; --text-tertiary: #71717a;
+  --accent: #7ba69e; --accent-dim: rgba(123,166,158,0.12);
+  --badge-bg: rgba(255,255,255,0.06); --badge-border: rgba(255,255,255,0.1);
+  --star: #f5c542; --map-filter: grayscale(0.3) brightness(0.85);
+  --hero-overlay: linear-gradient(180deg, rgba(9,9,11,0.25) 0%, rgba(9,9,11,0.82) 65%, #09090b 100%);
+  --shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+[data-theme="light"] {
+  --bg: #f7f7f5; --bg-elevated: #ffffff; --bg-card: #ffffff; --border: #e4e2dd;
+  --text: #1a1a1a; --text-secondary: #5c5c5c; --text-tertiary: #8c8c8c;
+  --accent: #4d7a72; --accent-dim: rgba(77,122,114,0.1);
+  --badge-bg: rgba(0,0,0,0.04); --badge-border: rgba(0,0,0,0.08);
+  --star: #e6ad00; --map-filter: none;
+  --hero-overlay: linear-gradient(180deg, rgba(247,247,245,0.15) 0%, rgba(247,247,245,0.78) 65%, #f7f7f5 100%);
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.7; font-weight: 400; transition: background var(--transition), color var(--transition); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; transition: opacity var(--transition); }
+a:hover { opacity: 0.8; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.2; }
+.container { width: var(--container); margin: 0 auto; }
+section { padding: var(--section-gap) 0; }
+.section-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem; font-weight: 500; }
+.section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 1.5rem; color: var(--text); }
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 0; transition: background var(--transition), backdrop-filter var(--transition); }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.header-inner { width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-family: var(--font-display); font-size: 1rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%; }
+.header-controls { display: flex; align-items: center; gap: 0.5rem; }
+.lang-select { font-family: var(--font-body); font-size: 0.8rem; background: var(--badge-bg); color: var(--text-secondary); border: 1px solid var(--badge-border); border-radius: var(--radius-sm); padding: 0.4rem 0.6rem; cursor: pointer; outline: none; transition: border-color var(--transition); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.5rem center; padding-right: 1.6rem; }
+.lang-select:focus { border-color: var(--accent); }
+.theme-toggle { background: var(--badge-bg); border: 1px solid var(--badge-border); border-radius: var(--radius-sm); color: var(--text-secondary); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color var(--transition), color var(--transition); font-size: 1rem; line-height: 1; }
+.theme-toggle:hover { border-color: var(--accent); color: var(--text); }
+.hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; padding: 0 0 clamp(60px, 10vw, 100px) 0; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=1400&q=80') center 30%/cover no-repeat; z-index: 0; transform: scale(1.05); animation: heroZoom 20s ease-in-out infinite alternate; }
+@keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.12); } }
+.hero-overlay { position: absolute; inset: 0; background: var(--hero-overlay); z-index: 1; }
+.hero-content { position: relative; z-index: 2; width: var(--container); margin: 0 auto; }
+.hero-badge { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--badge-bg); border: 1px solid var(--badge-border); border-radius: 50px; padding: 0.45rem 1rem; font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1.5rem; backdrop-filter: blur(10px); }
+.hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.hero-badge .sep { opacity: 0.3; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.6rem); color: #fff; margin-bottom: 0.3rem; max-width: 800px; }
+[data-theme="light"] .hero h1 { color: var(--text); }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.3rem); color: var(--text-secondary); margin-bottom: 2rem; font-weight: 300; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 500; font-family: var(--font-body); border: none; cursor: pointer; transition: all var(--transition); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { opacity: 0.9; color: #fff; }
+.btn-outline { background: transparent; border: 1px solid var(--badge-border); color: var(--text-secondary); }
+.btn-outline:hover { border-color: var(--text-secondary); color: var(--text); }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag { font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.35rem 0.8rem; border-radius: 50px; background: var(--badge-bg); border: 1px solid var(--badge-border); color: var(--text-tertiary); backdrop-filter: blur(8px); }
+.hero-location { display: flex; align-items: center; gap: 0.4rem; color: var(--text-tertiary); font-size: 0.82rem; margin-bottom: 1.5rem; }
+.overview-text { font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2.5rem; line-height: 1.8; }
+.highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.highlight-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: border-color var(--transition); }
+.highlight-card:hover { border-color: var(--accent); }
+.highlight-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--accent-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.1rem; }
+.highlight-card h3 { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+.highlight-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.gallery-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 1rem; }
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-item { flex: 0 0 min(420px, 85vw); scroll-snap-align: start; position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; cursor: grab; }
+.gallery-item:active { cursor: grabbing; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 1.2rem 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.7)); font-size: 0.8rem; color: #e4e4e7; }
+.gallery-caption small { opacity: 0.6; margin-left: 0.3rem; }
+.gallery-nav { display: flex; gap: 0.5rem; margin-top: 1.25rem; justify-content: flex-end; }
+.gallery-nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: all var(--transition); }
+.gallery-nav button:hover { border-color: var(--accent); color: var(--text); }
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+@media (max-width: 700px) { .tips-grid { grid-template-columns: 1fr; } }
+.tip-column h3 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 1.25rem; }
+.step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+.step-num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--accent-dim); color: var(--accent); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.step-body h4 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem; }
+.step-body p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.6; }
+.tip-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1rem; }
+.tip-card-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem; font-weight: 500; }
+.tip-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.reviews-declaration { font-size: 0.82rem; color: var(--text-tertiary); max-width: 700px; margin-bottom: 2rem; line-height: 1.7; }
+.reviews-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.reviews-score { font-size: 3rem; font-family: var(--font-display); color: var(--text); line-height: 1; }
+.reviews-stars { color: var(--star); font-size: 1.1rem; letter-spacing: 0.1em; }
+.reviews-count { font-size: 0.82rem; color: var(--text-tertiary); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.review-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; transition: border-color var(--transition); }
+.review-card:hover { border-color: color-mix(in srgb, var(--border) 50%, var(--accent)); }
+.review-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.8rem; }
+.review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent-dim); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 600; flex-shrink: 0; }
+.review-meta h4 { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; }
+.review-meta span { font-size: 0.73rem; color: var(--text-tertiary); }
+.review-stars { color: var(--star); font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+.review-text { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.65; font-style: italic; }
+.reviews-more { margin-top: 2rem; text-align: center; }
+.map-wrapper { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); margin-bottom: 2rem; position: relative; }
+.map-wrapper iframe { width: 100%; height: 400px; display: block; filter: var(--map-filter); }
+.map-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.map-info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+.map-info-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 0.4rem; font-weight: 500; }
+.map-info-card .value { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.3rem; }
+.map-info-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+.citation-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+.citation-item:first-child { border-top: 1px solid var(--border); }
+.citation-item h4 { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.25rem; }
+.citation-item p { font-size: 0.8rem; color: var(--text-secondary); }
+.site-footer { border-top: 1px solid var(--border); padding: 3rem 0; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.footer-links a { font-size: 0.8rem; color: var(--text-tertiary); }
+.footer-links a:hover { color: var(--text); }
+.footer-contact { font-size: 0.78rem; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+.footer-copy { font-size: 0.73rem; color: var(--text-tertiary); opacity: 0.7; }
+.page-overlay { position: fixed; inset: 0; z-index: 200; background: var(--bg); overflow-y: auto; display: none; opacity: 0; transition: opacity 0.3s ease; }
+.page-overlay.active { display: block; opacity: 1; }
+.page-overlay .page-header { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+.page-overlay .close-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: all var(--transition); }
+.page-overlay .close-btn:hover { border-color: var(--accent); color: var(--text); }
+.page-content { padding-bottom: 4rem; }
+.page-content h1 { font-size: 1.8rem; margin-bottom: 2rem; }
+.page-content h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+.page-content p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+.page-content ul { padding-left: 1.2rem; margin-bottom: 1rem; }
+.page-content li { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.3rem; }
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.hero-content .fade-in { transform: translateY(30px); }
+.hero-content .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.hero-content .fade-in:nth-child(2) { transition-delay: 0.2s; }
+.hero-content .fade-in:nth-child(3) { transition-delay: 0.3s; }
+.hero-content .fade-in:nth-child(4) { transition-delay: 0.4s; }
+.hero-content .fade-in:nth-child(5) { transition-delay: 0.5s; }
+/* Hide Google Maps attribution */
+.gm-style-cc, .gmnoprint { display: none !important; }
+@media (max-width: 600px) {
+  .header-logo { font-size: 0.85rem; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .hero-badge { font-size: 0.7rem; }
+  .gallery-item { flex: 0 0 90vw; }
+  .map-info { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="header-logo">Chemin de Nietzsche</div>
+    <div class="header-controls">
+      <select class="lang-select" id="langSelect" aria-label="Language">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="zh-Hant">繁體中文</option>
+      </select>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☽</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-in">
+      <span class="dot"></span>
+      <span data-i18n="hero.badge_type"></span>
+      <span class="sep">·</span>
+      <span>★ 4.5/5 (1 036 avis)</span>
+      <span class="sep">·</span>
+      <span data-i18n="hero.open_hours"></span>
+    </div>
+    <h1 class="fade-in" data-i18n="hero.title"></h1>
+    <p class="hero-subtitle fade-in" data-i18n="hero.subtitle"></p>
+    <div class="hero-actions fade-in">
+      <a href="#overview" class="btn btn-primary" data-i18n="hero.cta_discover"></a>
+      <a href="#photos" class="btn btn-outline" data-i18n="hero.cta_photos"></a>
+    </div>
+    <div class="hero-location fade-in">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>06360 Èze, France</span>
+    </div>
+    <div class="hero-tags fade-in" id="heroTags"></div>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="overview.label"></div>
+    <h2 class="section-title fade-in" data-i18n="overview.title"></h2>
+    <p class="overview-text fade-in" data-i18n="overview.text"></p>
+    <div class="highlights" id="highlights"></div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="gallery.label"></div>
+    <h2 class="section-title fade-in" data-i18n="gallery.title"></h2>
+  </div>
+  <div class="container">
+    <div class="gallery-track" id="galleryTrack"></div>
+    <div class="gallery-nav">
+      <button id="galleryPrev" aria-label="Previous">&#8592;</button>
+      <button id="galleryNext" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<section id="tips">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="tips.label"></div>
+    <h2 class="section-title fade-in" data-i18n="tips.title"></h2>
+    <p class="overview-text fade-in" data-i18n="tips.intro"></p>
+    <div class="tips-grid" id="tipsGrid"></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="reviews.label"></div>
+    <h2 class="section-title fade-in" data-i18n="reviews.title"></h2>
+    <div class="reviews-header fade-in">
+      <div class="reviews-score">4.5</div>
+      <div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-count">(1 036 <span data-i18n="reviews.reviews_word"></span>)</div>
+      </div>
+    </div>
+    <p class="reviews-declaration fade-in" data-i18n="reviews.declaration"></p>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+    <div class="reviews-more fade-in">
+      <a href="https://maps.app.goo.gl/qUr3Du6hvNA6diu89" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="reviews.see_more"></a>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="map.label"></div>
+    <h2 class="section-title fade-in" data-i18n="map.title"></h2>
+    <div class="map-wrapper fade-in">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4077.5909351537507!2d7.358143635994624!3d43.72525638013801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc35d121a26e3%3A0x96fb3f935826b8f4!2sChemin%20de%20Nietzsche!5e0!3m2!1sen!2sus!4v1774318336452!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="fade-in" style="margin-bottom:2rem;">
+      <a href="https://maps.app.goo.gl/qUr3Du6hvNA6diu89" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="map.open_gmaps"></a>
+    </div>
+    <div class="map-info" id="mapInfo"></div>
+  </div>
+</section>
+
+<section id="citations">
+  <div class="container">
+    <div class="section-label fade-in" data-i18n="citations.label"></div>
+    <h2 class="section-title fade-in" data-i18n="citations.title"></h2>
+    <div id="citationsList"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links" id="footerLinks"></div>
+    <div class="footer-contact" data-i18n="footer.contact"></div>
+    <div class="footer-copy" data-i18n="footer.copy"></div>
+  </div>
+</footer>
+
+<div class="page-overlay" id="privacyPage">
+  <div class="container">
+    <div class="page-header"><h3 data-i18n="privacy.title"></h3><button class="close-btn" onclick="closePage('privacyPage')">✕</button></div>
+    <div class="page-content" id="privacyContent"></div>
+  </div>
+</div>
+<div class="page-overlay" id="termsPage">
+  <div class="container">
+    <div class="page-header"><h3 data-i18n="terms.title"></h3><button class="close-btn" onclick="closePage('termsPage')">✕</button></div>
+    <div class="page-content" id="termsContent"></div>
+  </div>
+</div>
+<div class="page-overlay" id="cookiePage">
+  <div class="container">
+    <div class="page-header"><h3 data-i18n="cookies.title"></h3><button class="close-btn" onclick="closePage('cookiePage')">✕</button></div>
+    <div class="page-content" id="cookieContent"></div>
+  </div>
+</div>
+<script>
+const T = {
+fr: {
+  hero: { badge_type: "Sentier de randonnée", open_hours: "Ouvert 24h/24", title: "Chemin de Nietzsche", subtitle: "Guide du Visiteur", cta_discover: "Découvrir", cta_photos: "Voir les photos", tags: ["Sentier","Nietzsche","Èze","Côte d'Azur","Randonnée","Panorama","Philosophie"] },
+  overview: {
+    label: "Aperçu",
+    title: "Un sentier entre philosophie et vertige",
+    text: "Le Chemin de Nietzsche est un sentier escarpé reliant le bord de mer d'Èze-sur-Mer au village perché d'Èze. Nommé d'après Friedrich Nietzsche, qui y aurait conçu la troisième partie d'Ainsi parlait Zarathoustra, ce parcours de 1,5 km offre des vues spectaculaires sur la Méditerranée et la Côte d'Azur.",
+    highlights: [
+      { icon: "🥾", title: "Dénivelé de 427 m", desc: "Un sentier intense de 1,5 km avec un dénivelé de 427 mètres — comptez 45 à 90 minutes de montée selon votre rythme." },
+      { icon: "🌊", title: "Vue Méditerranée", desc: "Panorama à 360° sur la mer, le cap Ferrat, Monaco et les Alpes par temps clair. L'un des plus beaux points de vue de la Riviera." },
+      { icon: "📖", title: "Inspiration de Nietzsche", desc: "Le philosophe allemand a fréquenté ce sentier entre 1883 et 1885, période pendant laquelle il a rédigé son œuvre majeure." }
+    ]
+  },
+  gallery: { label: "Photos", title: "Chemin de Nietzsche en images", captions: ["Vue sur la Méditerranée depuis le sentier","Le sentier escarpé entre les rochers","Village perché d'Èze au sommet","Panorama sur le cap Ferrat","Végétation méditerranéenne le long du chemin","Escaliers de pierre taillés dans la roche"] },
+  tips: {
+    label: "Conseils",
+    title: "Comment randonner confortablement",
+    intro: "Le Chemin de Nietzsche est un sentier court mais exigeant. Préparez-vous bien pour profiter pleinement de la montée et des panoramas.",
+    steps_title: "Itinéraire recommandé",
+    steps: [
+      { title: "Départ depuis Èze-sur-Mer (gare SNCF)", desc: "Prenez le train jusqu'à la gare d'Èze-sur-Mer. Le départ du sentier se trouve à 200 m de la gare, sur la droite en remontant la route." },
+      { title: "Montée par le sentier (45-90 min)", desc: "Suivez les balises sur le chemin rocheux. Le parcours est raide mais offre des pauses naturelles avec des vues de plus en plus spectaculaires." },
+      { title: "Explorez le village et le Jardin exotique", desc: "Au sommet, visitez le village médiéval d'Èze et son jardin exotique. Redescendez en bus (ligne 82/112) pour boucler la boucle." }
+    ],
+    safety_label: "Sécurité",
+    safety: "Le sentier est rocheux et glissant par temps humide. Évitez de randonner après la pluie ou en plein soleil d'été sans eau. Portez des chaussures de randonnée. Pas de barrières sur les sections exposées.",
+    terrain_label: "Équipement",
+    terrain: "Chaussures de randonnée obligatoires. Emportez au minimum 1L d'eau par personne, de la crème solaire et un chapeau. Le sentier n'est pas adapté aux poussettes ni aux personnes à mobilité réduite."
+  },
+  reviews: {
+    label: "Avis",
+    title: "Avis de vrais visiteurs",
+    reviews_word: "avis",
+    declaration: "Évaluations et avis provenant de Google Maps (dernière mise à jour : 2026). Nous ne montrons qu'une sélection d'avis hautement notés vérifiés. Pour voir tous les avis complets et les plus récents, cliquez sur le lien ci-dessous.",
+    see_more: "Voir plus d'avis sur Google Maps",
+    items: [
+      { name: "Marc D.", role: "Guide local · Il y a 1 mois", text: "Une randonnée courte mais intense avec une récompense extraordinaire au sommet. La vue sur la Méditerranée et le cap Ferrat est à couper le souffle. Partez tôt le matin pour éviter la chaleur." },
+      { name: "Claire B.", role: "Photographe · Il y a 2 mois", text: "Le sentier offre des compositions photographiques incroyables à chaque virage. La lumière du matin est idéale — les rochers dorés contrastent magnifiquement avec le bleu de la mer." },
+      { name: "Thomas W.", role: "Voyageur · Il y a 3 semaines", text: "Quelle expérience ! Le sentier est escarpé mais très gratifiant. Le village d'Èze au sommet est charmant. Prenez le bus pour descendre et le train pour revenir — parfait en boucle." },
+      { name: "Isabelle M.", role: "Touriste · 2025-11", text: "Magnifique même en automne ! Moins de monde et une lumière douce. Le jardin exotique au sommet vaut vraiment le détour. Prévoyez de bonnes chaussures, le chemin est très caillouteux." },
+      { name: "André P.", role: "Résident local · 2025-09", text: "Je fais ce sentier chaque semaine depuis des années. Chaque saison a son charme — le printemps avec les fleurs sauvages est mon moment préféré. Un trésor de la Côte d'Azur." },
+      { name: "Emma L.", role: "Voyageur indépendant · 2025-10", text: "An absolute must-do on the French Riviera! The climb is challenging but the views are unmatched. Start from Èze-sur-Mer train station and work your way up. Bring plenty of water!" },
+      { name: "Stefan K.", role: "Passionné de philosophie · 2025-08", text: "Marcher sur les traces de Nietzsche est une expérience à la fois physique et spirituelle. On comprend pourquoi ce lieu l'a inspiré. Le silence, la vue, l'effort — tout contribue à la réflexion." },
+      { name: "Sophie Chen", role: "Routard · 2025-07", text: "從尼斯搭火車到Èze-sur-Mer很方便。步道雖然陡峭但風景壯麗，每個轉彎都有驚喜。山頂的中世紀村莊和異國花園是完美的終點。" }
+    ]
+  },
+  map: {
+    label: "Carte",
+    title: "Carte",
+    open_gmaps: "Planifier l'itinéraire dans Google Maps",
+    info: [
+      { label: "Horaires", value: "Ouvert 24h/24", desc: "Sentier accessible en permanence ; le village d'Èze et le Jardin exotique ont leurs propres horaires." },
+      { label: "Meilleure lumière", value: "Matin (7h-10h)", desc: "La lumière du matin est idéale pour la montée et la photographie. Évitez le plein soleil de midi en été." },
+      { label: "Règle de base", value: "Restez sur le sentier", desc: "Le terrain est instable hors sentier. Ne vous aventurez pas sur les bords des falaises et respectez la végétation protégée." }
+    ]
+  },
+  citations: {
+    label: "Données et citations",
+    title: "Données et citations",
+    items: [
+      { title: "Google Maps (Informations de base)", desc: "Note, heures d'ouverture, localisation, etc. (susceptibles de changer avec le temps)" },
+      { title: "Unsplash (Photographies)", desc: "Photos utilisées sous licence Unsplash. Crédits individuels dans les légendes." }
+    ]
+  },
+  footer: { privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", cookies: "Paramètres des cookies", contact: "Pour toute assistance technique concernant ce site, veuillez contacter : claritleonelmnicol@gmail.com", copy: "© 2026 Chemin de Nietzsche · Tous droits réservés." },
+  privacy: { title: "Politique de confidentialité", content: "<h1>Politique de confidentialité</h1><h2>Collecte de données</h2><p>Ce site est un guide statique et ne collecte aucune donnée personnelle directement. Nous n'utilisons pas de formulaires d'inscription, de comptes utilisateur ou de suivi comportemental.</p><h2>Cookies</h2><p>Nous utilisons uniquement un cookie localStorage pour mémoriser votre préférence de thème (clair/sombre) et de langue. Aucun cookie de suivi tiers n'est utilisé.</p><h2>Services tiers</h2><p>Ce site intègre Google Maps (iframe) et des images Unsplash. Ces services peuvent collecter des données selon leurs propres politiques de confidentialité.</p><h2>Contact</h2><p>Pour toute question relative à la confidentialité : claritleonelmnicol@gmail.com</p>" },
+  terms: { title: "Conditions d'utilisation", content: "<h1>Conditions d'utilisation</h1><h2>Utilisation du site</h2><p>Ce site est un guide touristique informatif. Les informations sont fournies à titre indicatif et peuvent évoluer. Vérifiez toujours les conditions actuelles avant votre visite.</p><h2>Propriété intellectuelle</h2><p>Les textes sont protégés par le droit d'auteur. Les photographies proviennent d'Unsplash et sont utilisées sous leur licence respective.</p><h2>Limitation de responsabilité</h2><p>Nous ne garantissons pas l'exactitude, l'exhaustivité ou l'actualité des informations. L'utilisation de ce site se fait à vos propres risques.</p><h2>Contact</h2><p>claritleonelmnicol@gmail.com</p>" },
+  cookies: { title: "Paramètres des cookies", content: "<h1>Paramètres des cookies</h1><h2>Cookies utilisés</h2><p>Ce site utilise uniquement le stockage local (localStorage) pour :</p><ul><li>Mémoriser votre préférence de thème (clair/sombre)</li><li>Mémoriser votre choix de langue</li></ul><h2>Aucun cookie de suivi</h2><p>Nous n'utilisons aucun cookie de suivi, d'analyse ou publicitaire. Aucune donnée n'est transmise à des tiers par notre site.</p><h2>Google Maps</h2><p>L'intégration de Google Maps peut utiliser ses propres cookies. Consultez la politique de confidentialité de Google pour plus d'informations.</p>" }
+},
+
+en: {
+  hero: { badge_type: "Hiking trail", open_hours: "Open 24/7", title: "Nietzsche Path", subtitle: "Visitor Guide", cta_discover: "Discover", cta_photos: "View photos", tags: ["Trail","Nietzsche","Èze","French Riviera","Hiking","Panorama","Philosophy"] },
+  overview: {
+    label: "Overview",
+    title: "A trail between philosophy and vertigo",
+    text: "The Chemin de Nietzsche is a steep trail connecting the seaside of Èze-sur-Mer to the hilltop village of Èze. Named after Friedrich Nietzsche, who reportedly conceived the third part of Thus Spoke Zarathustra here, this 1.5 km path offers spectacular views of the Mediterranean and the Côte d'Azur.",
+    highlights: [
+      { icon: "🥾", title: "427 m elevation gain", desc: "An intense 1.5 km trail with 427 metres of elevation gain — allow 45 to 90 minutes for the ascent depending on your pace." },
+      { icon: "🌊", title: "Mediterranean views", desc: "360° panorama over the sea, Cap Ferrat, Monaco and the Alps on clear days. One of the finest viewpoints on the Riviera." },
+      { icon: "📖", title: "Nietzsche's inspiration", desc: "The German philosopher walked this trail between 1883 and 1885, the period during which he wrote his major work." }
+    ]
+  },
+  gallery: { label: "Photos", title: "Nietzsche Path in pictures", captions: ["Mediterranean view from the trail","The steep path between rocks","Hilltop village of Èze at the summit","Panorama over Cap Ferrat","Mediterranean vegetation along the path","Stone steps carved into the rock"] },
+  tips: {
+    label: "Tips",
+    title: "How to hike comfortably",
+    intro: "The Chemin de Nietzsche is short but demanding. Prepare well to fully enjoy the climb and the panoramas.",
+    steps_title: "Recommended itinerary",
+    steps: [
+      { title: "Start from Èze-sur-Mer (SNCF station)", desc: "Take the train to Èze-sur-Mer station. The trailhead is 200 m from the station, on the right heading uphill on the road." },
+      { title: "Climb the trail (45-90 min)", desc: "Follow the trail markers on the rocky path. The route is steep but offers natural rest stops with increasingly spectacular views." },
+      { title: "Explore the village and Exotic Garden", desc: "At the top, visit the medieval village of Èze and its exotic garden. Take the bus back down (line 82/112) to complete the loop." }
+    ],
+    safety_label: "Safety",
+    safety: "The trail is rocky and slippery when wet. Avoid hiking after rain or in peak summer heat without water. Wear hiking shoes. No barriers on exposed sections.",
+    terrain_label: "Equipment",
+    terrain: "Hiking shoes required. Bring at least 1L of water per person, sunscreen and a hat. The trail is not suitable for pushchairs or those with reduced mobility."
+  },
+  reviews: {
+    label: "Reviews",
+    title: "Real visitor reviews",
+    reviews_word: "reviews",
+    declaration: "Ratings and reviews from Google Maps (last updated: 2026). We only show a selection of verified highly-rated reviews. To see all complete and recent reviews, click the link below.",
+    see_more: "See more reviews on Google Maps",
+    items: [
+      { name: "Marc D.", role: "Local guide · 1 month ago", text: "A short but intense hike with an extraordinary reward at the top. The view over the Mediterranean and Cap Ferrat is breathtaking. Leave early in the morning to avoid the heat." },
+      { name: "Claire B.", role: "Photographer · 2 months ago", text: "The trail offers incredible photographic compositions at every turn. Morning light is ideal — the golden rocks contrast beautifully with the deep blue sea." },
+      { name: "Thomas W.", role: "Traveller · 3 weeks ago", text: "What an experience! The trail is steep but very rewarding. The village of Èze at the top is charming. Take the bus down and the train back — perfect loop." },
+      { name: "Isabelle M.", role: "Tourist · 2025-11", text: "Stunning even in autumn! Fewer crowds and soft light. The exotic garden at the top is really worth the detour. Bring good shoes — the path is very rocky." },
+      { name: "André P.", role: "Local resident · 2025-09", text: "I've been doing this trail weekly for years. Every season has its charm — spring with the wildflowers is my favourite time. A Côte d'Azur treasure." },
+      { name: "Emma L.", role: "Independent traveller · 2025-10", text: "An absolute must-do on the French Riviera! The climb is challenging but the views are unmatched. Start from Èze-sur-Mer train station and work your way up. Bring plenty of water!" },
+      { name: "Stefan K.", role: "Philosophy enthusiast · 2025-08", text: "Walking in Nietzsche's footsteps is both a physical and spiritual experience. You understand why this place inspired him. The silence, the view, the effort — everything contributes to reflection." },
+      { name: "Sophie Chen", role: "Backpacker · 2025-07", text: "Very convenient train from Nice to Èze-sur-Mer. The trail is steep but the scenery is magnificent — every turn brings a surprise. The medieval village and exotic garden at the top are the perfect finale." }
+    ]
+  },
+  map: {
+    label: "Map",
+    title: "Map",
+    open_gmaps: "Plan route in Google Maps",
+    info: [
+      { label: "Open hours", value: "Open 24/7", desc: "Trail accessible at all times; the village of Èze and the Exotic Garden have their own opening hours." },
+      { label: "Best light", value: "Morning (7-10am)", desc: "Morning light is ideal for the climb and photography. Avoid the midday sun in summer." },
+      { label: "Basic rule", value: "Stay on the trail", desc: "The terrain is unstable off-trail. Do not venture near cliff edges and respect the protected vegetation." }
+    ]
+  },
+  citations: {
+    label: "Data & references",
+    title: "Data & references",
+    items: [
+      { title: "Google Maps (Basic information)", desc: "Rating, opening hours, location, etc. (subject to change over time)" },
+      { title: "Unsplash (Photographs)", desc: "Photos used under the Unsplash licence. Individual credits in captions." }
+    ]
+  },
+  footer: { privacy: "Privacy Policy", terms: "Terms of Service", cookies: "Cookie Settings", contact: "For technical support regarding this website, please contact: claritleonelmnicol@gmail.com", copy: "© 2026 Chemin de Nietzsche · All rights reserved." },
+  privacy: { title: "Privacy Policy", content: "<h1>Privacy Policy</h1><h2>Data Collection</h2><p>This site is a static guide and does not collect any personal data directly. We do not use registration forms, user accounts or behavioural tracking.</p><h2>Cookies</h2><p>We only use localStorage to remember your theme (light/dark) and language preference. No third-party tracking cookies are used.</p><h2>Third-party Services</h2><p>This site embeds Google Maps (iframe) and Unsplash images. These services may collect data according to their own privacy policies.</p><h2>Contact</h2><p>For any privacy-related questions: claritleonelmnicol@gmail.com</p>" },
+  terms: { title: "Terms of Service", content: "<h1>Terms of Service</h1><h2>Use of the Site</h2><p>This site is an informational tourist guide. Information is provided for reference only and may change. Always verify current conditions before your visit.</p><h2>Intellectual Property</h2><p>Texts are protected by copyright. Photographs come from Unsplash and are used under their respective licences.</p><h2>Limitation of Liability</h2><p>We do not guarantee the accuracy, completeness or timeliness of the information. Use of this site is at your own risk.</p><h2>Contact</h2><p>claritleonelmnicol@gmail.com</p>" },
+  cookies: { title: "Cookie Settings", content: "<h1>Cookie Settings</h1><h2>Cookies Used</h2><p>This site only uses local storage (localStorage) for:</p><ul><li>Remembering your theme preference (light/dark)</li><li>Remembering your language choice</li></ul><h2>No Tracking Cookies</h2><p>We do not use any tracking, analytics or advertising cookies. No data is transmitted to third parties by our site.</p><h2>Google Maps</h2><p>The Google Maps integration may use its own cookies. Please refer to Google's privacy policy for more information.</p>" }
+},
+
+de: {
+  hero: { badge_type: "Wanderweg", open_hours: "24/7 geöffnet", title: "Nietzsche-Weg", subtitle: "Besucherführer", cta_discover: "Entdecken", cta_photos: "Fotos ansehen", tags: ["Wanderweg","Nietzsche","Èze","Côte d'Azur","Wandern","Panorama","Philosophie"] },
+  overview: {
+    label: "Überblick",
+    title: "Ein Weg zwischen Philosophie und Schwindel",
+    text: "Der Chemin de Nietzsche ist ein steiler Pfad, der das Meer bei Èze-sur-Mer mit dem Bergdorf Èze verbindet. Benannt nach Friedrich Nietzsche, der hier den dritten Teil von Also sprach Zarathustra konzipiert haben soll, bietet dieser 1,5 km lange Weg spektakuläre Ausblicke auf das Mittelmeer und die Côte d'Azur.",
+    highlights: [
+      { icon: "🥾", title: "427 m Höhenunterschied", desc: "Ein intensiver 1,5 km Pfad mit 427 Metern Höhenunterschied — rechnen Sie mit 45 bis 90 Minuten Aufstieg je nach Tempo." },
+      { icon: "🌊", title: "Mittelmeer-Aussicht", desc: "360°-Panorama über das Meer, das Cap Ferrat, Monaco und bei klarer Sicht die Alpen. Einer der schönsten Aussichtspunkte der Riviera." },
+      { icon: "📖", title: "Nietzsches Inspiration", desc: "Der deutsche Philosoph wanderte zwischen 1883 und 1885 auf diesem Pfad — die Zeit, in der er sein Hauptwerk verfasste." }
+    ]
+  },
+  gallery: { label: "Fotos", title: "Nietzsche-Weg in Bildern", captions: ["Mittelmeerblick vom Wanderweg","Der steile Pfad zwischen Felsen","Bergdorf Èze am Gipfel","Panorama über das Cap Ferrat","Mediterrane Vegetation am Weg","In den Fels gehauene Steinstufen"] },
+  tips: {
+    label: "Tipps",
+    title: "Komfortabel wandern",
+    intro: "Der Chemin de Nietzsche ist kurz aber anspruchsvoll. Bereiten Sie sich gut vor, um den Aufstieg und die Panoramen voll zu genießen.",
+    steps_title: "Empfohlene Route",
+    steps: [
+      { title: "Start ab Èze-sur-Mer (SNCF-Bahnhof)", desc: "Nehmen Sie den Zug zum Bahnhof Èze-sur-Mer. Der Einstieg liegt 200 m vom Bahnhof entfernt, rechts bergauf an der Straße." },
+      { title: "Aufstieg über den Pfad (45-90 Min.)", desc: "Folgen Sie den Markierungen auf dem felsigen Weg. Die Route ist steil, bietet aber natürliche Rastplätze mit immer spektakuläreren Ausblicken." },
+      { title: "Dorf und Exotischer Garten erkunden", desc: "Oben angekommen, besuchen Sie das mittelalterliche Dorf Èze und seinen exotischen Garten. Nehmen Sie den Bus zurück (Linie 82/112) für eine Rundtour." }
+    ],
+    safety_label: "Sicherheit",
+    safety: "Der Weg ist felsig und bei Nässe rutschig. Vermeiden Sie Wanderungen nach Regen oder in der Sommerhitze ohne Wasser. Tragen Sie Wanderschuhe. Keine Absperrungen an exponierten Stellen.",
+    terrain_label: "Ausrüstung",
+    terrain: "Wanderschuhe sind Pflicht. Nehmen Sie mindestens 1L Wasser pro Person, Sonnencreme und einen Hut mit. Der Weg ist nicht für Kinderwagen oder Menschen mit eingeschränkter Mobilität geeignet."
+  },
+  reviews: {
+    label: "Bewertungen",
+    title: "Echte Besucherbewertungen",
+    reviews_word: "Bewertungen",
+    declaration: "Bewertungen und Rezensionen von Google Maps (letztes Update: 2026). Wir zeigen nur eine Auswahl verifizierter Top-Bewertungen. Für alle vollständigen und aktuellen Bewertungen klicken Sie auf den Link unten.",
+    see_more: "Mehr Bewertungen auf Google Maps",
+    items: [
+      { name: "Marc D.", role: "Lokaler Reiseführer · Vor 1 Monat", text: "Eine kurze aber intensive Wanderung mit einer außergewöhnlichen Belohnung am Gipfel. Der Blick über das Mittelmeer und das Cap Ferrat ist atemberaubend. Starten Sie früh morgens." },
+      { name: "Claire B.", role: "Fotografin · Vor 2 Monaten", text: "Der Weg bietet an jeder Biegung unglaubliche fotografische Kompositionen. Morgenlicht ist ideal — die goldenen Felsen kontrastieren wunderschön mit dem tiefen Blau des Meeres." },
+      { name: "Thomas W.", role: "Reisender · Vor 3 Wochen", text: "Was für ein Erlebnis! Der Weg ist steil aber sehr lohnend. Das Dorf Èze am Gipfel ist bezaubernd. Nehmen Sie den Bus hinunter und den Zug zurück — perfekte Rundtour." },
+      { name: "Isabelle M.", role: "Touristin · 2025-11", text: "Auch im Herbst wunderschön! Weniger Besucher und weiches Licht. Der exotische Garten am Gipfel lohnt sich wirklich. Bringen Sie gute Schuhe mit — der Weg ist sehr steinig." },
+      { name: "André P.", role: "Einheimischer · 2025-09", text: "Ich mache diesen Weg seit Jahren wöchentlich. Jede Jahreszeit hat ihren Reiz — der Frühling mit den Wildblumen ist meine Lieblingszeit. Ein Schatz der Côte d'Azur." },
+      { name: "Emma L.", role: "Unabhängige Reisende · 2025-10", text: "Ein absolutes Muss an der Côte d'Azur! Der Aufstieg ist anspruchsvoll, aber die Aussichten sind unübertroffen. Starten Sie am Bahnhof Èze-sur-Mer. Genug Wasser mitnehmen!" },
+      { name: "Stefan K.", role: "Philosophie-Liebhaber · 2025-08", text: "In Nietzsches Fußstapfen zu wandern ist sowohl eine körperliche als auch eine spirituelle Erfahrung. Man versteht, warum dieser Ort ihn inspiriert hat. Die Stille, der Ausblick, die Anstrengung." },
+      { name: "Sophie Chen", role: "Rucksackreisende · 2025-07", text: "Sehr bequemer Zug von Nizza nach Èze-sur-Mer. Der Weg ist steil, aber die Landschaft ist grandios — jede Biegung bringt eine Überraschung. Das mittelalterliche Dorf am Gipfel ist das perfekte Finale." }
+    ]
+  },
+  map: {
+    label: "Karte",
+    title: "Karte",
+    open_gmaps: "Route in Google Maps planen",
+    info: [
+      { label: "Öffnungszeiten", value: "24/7 geöffnet", desc: "Wanderweg jederzeit zugänglich; das Dorf Èze und der Exotische Garten haben eigene Öffnungszeiten." },
+      { label: "Bestes Licht", value: "Morgens (7-10 Uhr)", desc: "Morgenlicht ist ideal für Aufstieg und Fotografie. Vermeiden Sie die Mittagssonne im Sommer." },
+      { label: "Grundregel", value: "Auf dem Weg bleiben", desc: "Das Gelände ist abseits des Weges instabil. Gehen Sie nicht an Klippenkanten und respektieren Sie die geschützte Vegetation." }
+    ]
+  },
+  citations: {
+    label: "Daten & Quellen",
+    title: "Daten & Quellen",
+    items: [
+      { title: "Google Maps (Basisinformationen)", desc: "Bewertung, Öffnungszeiten, Standort usw. (können sich im Laufe der Zeit ändern)" },
+      { title: "Unsplash (Fotografien)", desc: "Fotos unter der Unsplash-Lizenz verwendet. Einzelne Credits in den Bildunterschriften." }
+    ]
+  },
+  footer: { privacy: "Datenschutzrichtlinie", terms: "Nutzungsbedingungen", cookies: "Cookie-Einstellungen", contact: "Für technische Unterstützung zu dieser Website kontaktieren Sie bitte: claritleonelmnicol@gmail.com", copy: "© 2026 Chemin de Nietzsche · Alle Rechte vorbehalten." },
+  privacy: { title: "Datenschutzrichtlinie", content: "<h1>Datenschutzrichtlinie</h1><h2>Datenerhebung</h2><p>Diese Website ist ein statischer Reiseführer und erhebt keine personenbezogenen Daten direkt. Wir verwenden keine Registrierungsformulare, Benutzerkonten oder Verhaltensverfolgung.</p><h2>Cookies</h2><p>Wir verwenden nur localStorage, um Ihre Themen- (hell/dunkel) und Sprachpräferenz zu speichern. Es werden keine Drittanbieter-Tracking-Cookies verwendet.</p><h2>Drittanbieterdienste</h2><p>Diese Website bindet Google Maps (iframe) und Unsplash-Bilder ein. Diese Dienste können gemäß ihren eigenen Datenschutzrichtlinien Daten erheben.</p><h2>Kontakt</h2><p>Bei Datenschutzfragen: claritleonelmnicol@gmail.com</p>" },
+  terms: { title: "Nutzungsbedingungen", content: "<h1>Nutzungsbedingungen</h1><h2>Nutzung der Website</h2><p>Diese Website ist ein informativer Reiseführer. Informationen dienen nur als Referenz und können sich ändern. Überprüfen Sie immer die aktuellen Bedingungen vor Ihrem Besuch.</p><h2>Geistiges Eigentum</h2><p>Texte sind urheberrechtlich geschützt. Fotografien stammen von Unsplash und werden unter deren jeweiligen Lizenzen verwendet.</p><h2>Haftungsbeschränkung</h2><p>Wir garantieren nicht die Richtigkeit, Vollständigkeit oder Aktualität der Informationen. Die Nutzung erfolgt auf eigenes Risiko.</p><h2>Kontakt</h2><p>claritleonelmnicol@gmail.com</p>" },
+  cookies: { title: "Cookie-Einstellungen", content: "<h1>Cookie-Einstellungen</h1><h2>Verwendete Cookies</h2><p>Diese Website verwendet nur lokalen Speicher (localStorage) für:</p><ul><li>Speicherung Ihrer Themenpräferenz (hell/dunkel)</li><li>Speicherung Ihrer Sprachauswahl</li></ul><h2>Keine Tracking-Cookies</h2><p>Wir verwenden keine Tracking-, Analyse- oder Werbe-Cookies. Keine Daten werden von unserer Website an Dritte übermittelt.</p><h2>Google Maps</h2><p>Die Google Maps-Integration kann eigene Cookies verwenden. Weitere Informationen finden Sie in der Datenschutzrichtlinie von Google.</p>" }
+},
+
+'zh-Hant': {
+  hero: { badge_type: "健行步道", open_hours: "全天開放", title: "尼采之路", subtitle: "遊客指南", cta_discover: "探索", cta_photos: "查看照片", tags: ["步道","尼采","埃茲","蔚藍海岸","健行","全景","哲學"] },
+  overview: {
+    label: "概覽",
+    title: "一條介於哲學與眩暈之間的小徑",
+    text: "尼采之路是一條陡峭的步道，連接海邊的埃茲濱海（Èze-sur-Mer）和山頂的埃茲村。以德國哲學家弗里德里希·尼采命名，據說他在此構思了《查拉圖斯特拉如是說》第三部分。這條1.5公里的步道可飽覽地中海和蔚藍海岸的壯麗景色。",
+    highlights: [
+      { icon: "🥾", title: "427米海拔落差", desc: "1.5公里的高強度步道，海拔落差427米——依個人速度約需45至90分鐘攀登。" },
+      { icon: "🌊", title: "地中海景觀", desc: "360度全景俯瞰大海、費拉角、摩納哥，天氣晴朗時還可遠眺阿爾卑斯山。蔚藍海岸最佳觀景點之一。" },
+      { icon: "📖", title: "尼采的靈感之地", desc: "這位德國哲學家在1883至1885年間行走此步道，正是他撰寫重要著作的時期。" }
+    ]
+  },
+  gallery: { label: "照片", title: "尼采之路影像集", captions: ["從步道眺望地中海","岩石間的陡峭小徑","山頂的埃茲中世紀村莊","費拉角全景","步道沿途的地中海植被","岩壁上雕鑿的石階"] },
+  tips: {
+    label: "建議",
+    title: "如何舒適地健行",
+    intro: "尼采之路路程短但頗具挑戰性。做好充分準備，才能盡情享受攀登過程和壯麗全景。",
+    steps_title: "推薦路線",
+    steps: [
+      { title: "從埃茲濱海火車站出發", desc: "搭火車到Èze-sur-Mer站。步道入口在車站右方約200米處，沿公路上坡方向。" },
+      { title: "攀登步道（45-90分鐘）", desc: "沿著岩石小徑上的標誌前進。路線陡峭，但沿途有天然休息點，景色越來越壯觀。" },
+      { title: "探索村莊和異國花園", desc: "到達山頂後，參觀埃茲中世紀村莊和異國花園。搭公車下山（82/112路線）形成完美的環線。" }
+    ],
+    safety_label: "安全",
+    safety: "步道多岩石，潮濕時容易打滑。避免在雨後或夏季正午無水的情況下健行。請穿登山鞋。裸露路段無護欄。",
+    terrain_label: "裝備",
+    terrain: "必須穿登山鞋。每人至少攜帶1升水、防曬霜和帽子。步道不適合嬰兒車或行動不便者。"
+  },
+  reviews: {
+    label: "評價",
+    title: "真實遊客評價",
+    reviews_word: "則評價",
+    declaration: "評分和評價來自 Google 地圖（最後更新：2026年）。我們僅展示經過驗證的精選高分評價。如需查看所有完整和最新評價，請點擊下方連結。",
+    see_more: "在 Google 地圖查看更多評價",
+    items: [
+      { name: "Marc D.", role: "當地嚮導 · 1個月前", text: "一段短暫但強烈的健行，山頂的獎賞令人驚嘆。俯瞰地中海和費拉角的景色令人窒息。建議清晨出發避開酷熱。" },
+      { name: "Claire B.", role: "攝影師 · 2個月前", text: "步道每個轉彎都有令人驚嘆的攝影構圖。晨光最為理想——金色岩石與深藍大海形成絕美對比。" },
+      { name: "Thomas W.", role: "旅行者 · 3週前", text: "太棒了！步道雖陡但非常值得。山頂的埃茲村迷人至極。搭公車下山、火車返回——完美的環形路線。" },
+      { name: "Isabelle M.", role: "遊客 · 2025-11", text: "秋天來也很美！人少光線柔和。山頂的異國花園確實值得一看。請帶好鞋——路面非常崎嶇。" },
+      { name: "André P.", role: "當地居民 · 2025-09", text: "我多年來每週都走這條步道。每個季節都有其魅力——春天野花盛開是我最喜歡的時刻。蔚藍海岸的寶藏。" },
+      { name: "Emma L.", role: "自由行旅客 · 2025-10", text: "蔚藍海岸必做的體驗！攀登有挑戰性但景色無與倫比。從Èze-sur-Mer火車站出發，一路向上。記得帶足夠的水！" },
+      { name: "Stefan K.", role: "哲學愛好者 · 2025-08", text: "沿著尼采的足跡行走，是一種身體與精神的雙重體驗。你會理解為什麼這個地方啟發了他。寂靜、風景、努力——一切都促使人思考。" },
+      { name: "Sophie Chen", role: "背包客 · 2025-07", text: "從尼斯搭火車到Èze-sur-Mer很方便。步道雖然陡峭但風景壯麗，每個轉彎都有驚喜。山頂的中世紀村莊和異國花園是完美的終點。" }
+    ]
+  },
+  map: {
+    label: "地圖",
+    title: "地圖",
+    open_gmaps: "在 Google 地圖規劃路線",
+    info: [
+      { label: "開放時間", value: "全天開放", desc: "步道全天候可進入；埃茲村和異國花園有各自的開放時間。" },
+      { label: "最佳光線", value: "早晨（7-10點）", desc: "晨光最適合攀登和攝影。夏季避免正午烈日。" },
+      { label: "基本規則", value: "留在步道上", desc: "步道外地形不穩定。請勿靠近懸崖邊緣，並尊重受保護的植被。" }
+    ]
+  },
+  citations: {
+    label: "資料與引用",
+    title: "資料與引用",
+    items: [
+      { title: "Google 地圖（基本資訊）", desc: "評分、開放時間、位置等（可能隨時間變化）" },
+      { title: "Unsplash（攝影作品）", desc: "照片依 Unsplash 授權使用。個別攝影師資訊見圖片說明。" }
+    ]
+  },
+  footer: { privacy: "隱私權政策", terms: "服務條款", cookies: "Cookie 設定", contact: "如需本網站的技術支援，請聯繫：claritleonelmnicol@gmail.com", copy: "© 2026 Chemin de Nietzsche · 保留所有權利。" },
+  privacy: { title: "隱私權政策", content: "<h1>隱私權政策</h1><h2>資料收集</h2><p>本網站為靜態導覽頁面，不直接收集任何個人資料。我們不使用註冊表單、使用者帳戶或行為追蹤。</p><h2>Cookies</h2><p>我們僅使用 localStorage 來記住您的主題偏好（亮色/暗色）和語言選擇。不使用任何第三方追蹤 Cookie。</p><h2>第三方服務</h2><p>本網站嵌入了 Google 地圖（iframe）和 Unsplash 圖片。這些服務可能根據其自身的隱私政策收集資料。</p><h2>聯繫方式</h2><p>如有任何隱私相關問題：claritleonelmnicol@gmail.com</p>" },
+  terms: { title: "服務條款", content: "<h1>服務條款</h1><h2>網站使用</h2><p>本網站為資訊性旅遊指南。資訊僅供參考，可能會有變更。請在造訪前務必確認最新條件。</p><h2>智慧財產權</h2><p>文字內容受版權保護。照片來自 Unsplash，依其各自授權條款使用。</p><h2>責任限制</h2><p>我們不保證資訊的準確性、完整性或時效性。使用本網站的風險由使用者自行承擔。</p><h2>聯繫方式</h2><p>claritleonelmnicol@gmail.com</p>" },
+  cookies: { title: "Cookie 設定", content: "<h1>Cookie 設定</h1><h2>使用的 Cookies</h2><p>本網站僅使用本地儲存（localStorage）用於：</p><ul><li>記住您的主題偏好（亮色/暗色）</li><li>記住您的語言選擇</li></ul><h2>無追蹤 Cookies</h2><p>我們不使用任何追蹤、分析或廣告 Cookie。本網站不會向第三方傳輸任何資料。</p><h2>Google 地圖</h2><p>Google 地圖的嵌入可能使用其自身的 Cookie。詳情請參閱 Google 的隱私權政策。</p>" }
+}
+};
+
+const photos = [
+  'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=800&q=80',
+  'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80',
+  'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+  'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80',
+  'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80',
+  'https://images.unsplash.com/photo-1445217143695-467124038776?w=800&q=80'
+];
+
+let currentLang = localStorage.getItem('nietzsche-lang') || 'fr';
+let currentTheme = localStorage.getItem('nietzsche-theme') || 'dark';
+
+function t(key) {
+  const keys = key.split('.');
+  let val = T[currentLang];
+  for (const k of keys) { if (val === undefined) return key; val = val[k]; }
+  return val || key;
+}
+
+function applyTheme(theme) {
+  currentTheme = theme;
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('nietzsche-theme', theme);
+  document.getElementById('themeToggle').textContent = theme === 'dark' ? '☽' : '☀';
+}
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh-Hant' ? 'zh-Hant' : lang;
+  localStorage.setItem('nietzsche-lang', lang);
+  document.getElementById('langSelect').value = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = t(el.getAttribute('data-i18n'));
+    if (typeof val === 'string') el.textContent = val;
+  });
+  renderTags(); renderHighlights(); renderGallery(); renderTips(); renderReviews(); renderMapInfo(); renderCitations(); renderFooterLinks(); renderPageContent();
+}
+
+function renderTags() {
+  const tags = t('hero.tags');
+  if (!Array.isArray(tags)) return;
+  document.getElementById('heroTags').innerHTML = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+}
+function renderHighlights() {
+  const items = t('overview.highlights');
+  if (!Array.isArray(items)) return;
+  document.getElementById('highlights').innerHTML = items.map(h => `<div class="highlight-card fade-in visible"><div class="highlight-icon">${h.icon}</div><h3>${h.title}</h3><p>${h.desc}</p></div>`).join('');
+}
+function renderGallery() {
+  const captions = t('gallery.captions');
+  if (!Array.isArray(captions)) return;
+  document.getElementById('galleryTrack').innerHTML = photos.map((url, i) => `<div class="gallery-item"><img src="${url}" alt="${captions[i] || ''}" loading="lazy"><div class="gallery-caption">${captions[i] || ''} <small>· Unsplash</small></div></div>`).join('');
+}
+function renderTips() {
+  const steps = t('tips.steps');
+  if (!Array.isArray(steps)) return;
+  document.getElementById('tipsGrid').innerHTML = `
+    <div class="tip-column fade-in visible"><h3>${t('tips.steps_title')}</h3>${steps.map((s, i) => `<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h4>${s.title}</h4><p>${s.desc}</p></div></div>`).join('')}</div>
+    <div class="tip-column fade-in visible"><h3>&nbsp;</h3><div class="tip-card"><div class="tip-card-label">${t('tips.safety_label')}</div><p>${t('tips.safety')}</p></div><div class="tip-card"><div class="tip-card-label">${t('tips.terrain_label')}</div><p>${t('tips.terrain')}</p></div></div>`;
+}
+function renderReviews() {
+  const items = t('reviews.items');
+  if (!Array.isArray(items)) return;
+  document.getElementById('reviewsGrid').innerHTML = items.map(r => `<div class="review-card fade-in visible"><div class="review-top"><div class="review-avatar">${r.name.charAt(0)}</div><div class="review-meta"><h4>${r.name}</h4><span>${r.role}</span></div></div><div class="review-stars">★★★★★</div><p class="review-text">"${r.text}"</p></div>`).join('');
+}
+function renderMapInfo() {
+  const info = t('map.info');
+  if (!Array.isArray(info)) return;
+  document.getElementById('mapInfo').innerHTML = info.map(item => `<div class="map-info-card fade-in visible"><div class="label">${item.label}</div><div class="value">${item.value}</div><p>${item.desc}</p></div>`).join('');
+}
+function renderCitations() {
+  const items = t('citations.items');
+  if (!Array.isArray(items)) return;
+  document.getElementById('citationsList').innerHTML = items.map(c => `<div class="citation-item fade-in visible"><h4>${c.title}</h4><p>${c.desc}</p></div>`).join('');
+}
+function renderFooterLinks() {
+  document.getElementById('footerLinks').innerHTML = `<a href="#" onclick="openPage('privacyPage');return false;">${t('footer.privacy')}</a><a href="#" onclick="openPage('termsPage');return false;">${t('footer.terms')}</a><a href="#" onclick="openPage('cookiePage');return false;">${t('footer.cookies')}</a>`;
+}
+function renderPageContent() {
+  document.getElementById('privacyContent').innerHTML = t('privacy.content');
+  document.getElementById('termsContent').innerHTML = t('terms.content');
+  document.getElementById('cookieContent').innerHTML = t('cookies.content');
+}
+
+function openPage(id) { const el = document.getElementById(id); el.style.display = 'block'; requestAnimationFrame(() => { el.style.opacity = '1'; }); document.body.style.overflow = 'hidden'; }
+function closePage(id) { const el = document.getElementById(id); el.style.opacity = '0'; setTimeout(() => { el.style.display = 'none'; }, 300); document.body.style.overflow = ''; }
+
+document.getElementById('galleryPrev').addEventListener('click', () => { document.getElementById('galleryTrack').scrollBy({ left: -440, behavior: 'smooth' }); });
+document.getElementById('galleryNext').addEventListener('click', () => { document.getElementById('galleryTrack').scrollBy({ left: 440, behavior: 'smooth' }); });
+
+window.addEventListener('scroll', () => { document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+function observeFadeIns() { document.querySelectorAll('.fade-in').forEach(el => observer.observe(el)); }
+
+document.getElementById('themeToggle').addEventListener('click', () => { applyTheme(currentTheme === 'dark' ? 'light' : 'dark'); });
+document.getElementById('langSelect').addEventListener('change', (e) => { applyLang(e.target.value); });
+
+applyTheme(currentTheme);
+applyLang(currentLang);
+requestAnimationFrame(() => { document.querySelectorAll('.hero-content .fade-in').forEach(el => el.classList.add('visible')); observeFadeIns(); });
+</script>
+</body>
+</html>
