@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Spiaggia Sabbioni | Riva del Garda - Guida Turistica",
+    "description": "Guida completa alla Spiaggia Sabbioni a Riva del Garda. Informazioni, foto, recensioni e consigli pratici per la tua visita."
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Galleria",
+    "reviews": "Recensioni",
+    "map": "Mappa",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "cookies": "Cookie",
+    "backHome": "Torna alla Home"
+  },
+  "hero": {
+    "title": "Spiaggia Sabbioni",
+    "subtitle": "La spiaggia più amata di Riva del Garda",
+    "rating": "4.6/5",
+    "ratingCount": "(6.157 recensioni)",
+    "hours": "Aperto 24h/24",
+    "viewOnMap": "Vedi su Google Maps",
+    "tags": ["Spiaggia", "Lago di Garda", "Famiglia", "Nuoto", "Panorama", "Relax"]
+  },
+  "intro": {
+    "title": "Panoramica",
+    "description": "Spiaggia Sabbioni è una delle spiagge più popolari e accessibili sul Lago di Garda, situata a Riva del Garda nella Provincia Autonoma di Trento. Offre una vista mozzafiato sulle montagne circostanti e acque cristalline.",
+    "highlights": [
+      "Spiaggia di ghiaia libera con ampi spazi",
+      "Vista panoramica sulle Alpi e il Lago di Garda",
+      "Ideale per famiglie con bambini",
+      "Vicina al centro storico di Riva del Garda",
+      "Servizi igienici e docce disponibili",
+      "Perfetta per nuoto, windsurf e vela"
+    ]
+  },
+  "gallery": {
+    "title": "Galleria Fotografica",
+    "subtitle": "Scorci dalla Spiaggia Sabbioni e dintorni",
+    "photos": [
+      { "src": "https://images.unsplash.com/photo-1596627116790-af6f46dddbab?w=800&q=80", "caption": "Vista panoramica del Lago di Garda" },
+      { "src": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80", "caption": "Acque cristalline della spiaggia" },
+      { "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80", "caption": "Spiaggia al tramonto" },
+      { "src": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80", "caption": "Montagne che circondano il lago" },
+      { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "Giornata estiva in spiaggia" },
+      { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "Sport acquatici sul lago" }
+    ]
+  },
+  "reviews": {
+    "title": "Recensioni dei Visitatori",
+    "declaration": "Valutazioni e recensioni provenienti da Google Maps (ultimo aggiornamento: 2026). Mostriamo solo una selezione di recensioni verificate con punteggio elevato. Per tutte le recensioni complete e aggiornate, clicca il link qui sotto.",
+    "moreReviews": "Vedi altre recensioni su Google Maps",
+    "items": [
+      { "name": "Marco R.", "date": "Agosto 2025", "stars": 5, "text": "Spiaggia bellissima con una vista spettacolare sulle montagne. Acqua pulita e cristallina. Perfetta per famiglie." },
+      { "name": "Anna L.", "date": "Luglio 2025", "stars": 5, "text": "Un posto meraviglioso per rilassarsi. La spiaggia è ampia e ben tenuta. I servizi sono adeguati." },
+      { "name": "Giovanni B.", "date": "Settembre 2025", "stars": 4, "text": "Ottima spiaggia, un po' affollata in alta stagione ma ne vale la pena. Vista incredibile." },
+      { "name": "Lucia F.", "date": "Giugno 2025", "stars": 5, "text": "La migliore spiaggia del Lago di Garda! Facile da raggiungere, vicina al centro. Consigliatissima." },
+      { "name": "Paolo M.", "date": "Agosto 2025", "stars": 5, "text": "Posto fantastico. L'acqua è trasparente e la vista sulle montagne è impareggiabile. Torneremo sicuramente." },
+      { "name": "Elena V.", "date": "Luglio 2025", "stars": 4, "text": "Spiaggia di sassi, portate le scarpe da scoglio. Ma il panorama compensa tutto. Bellissima." },
+      { "name": "Roberto C.", "date": "Settembre 2025", "stars": 5, "text": "Un gioiello nascosto. Perfetta per chi cerca tranquillità e natura. Il tramonto da qui è magico." },
+      { "name": "Chiara N.", "date": "Agosto 2025", "stars": 5, "text": "Adoro questa spiaggia! Ci veniamo ogni estate. Ideale per bambini e per chi ama nuotare." }
+    ]
+  },
+  "tips": {
+    "title": "Consigli per la Visita",
+    "subtitle": "Informazioni pratiche per goderti al meglio Spiaggia Sabbioni",
+    "items": [
+      { "title": "Periodo migliore", "content": "Da giugno a settembre per il nuoto. Maggio e ottobre offrono meno folla e temperature piacevoli." },
+      { "title": "Come arrivare", "content": "A 5 minuti a piedi dal centro di Riva del Garda. Parcheggi disponibili nelle vicinanze." },
+      { "title": "Cosa portare", "content": "Scarpe da scoglio (spiaggia di ghiaia), crema solare, acqua. Ombrelloni e lettini a noleggio in loco." },
+      { "title": "Attività", "content": "Nuoto, windsurf, vela, stand-up paddle. Percorso lungolago ideale per passeggiate e ciclismo." },
+      { "title": "Sicurezza", "content": "Acque generalmente calme, adatte ai bambini. Attenzione alle imbarcazioni nelle zone più lontane dalla riva." },
+      { "title": "Dintorni", "content": "Visita il centro storico di Riva del Garda, la Rocca (museo civico), e le Cascate del Varone a pochi km." }
+    ]
+  },
+  "map": {
+    "title": "Come Raggiungerci",
+    "address": "Via Cristoph Hartung Von Hartungen, 4, 38066 Riva del Garda TN, Italia",
+    "openInMaps": "Apri in Google Maps"
+  },
+  "sources": {
+    "title": "Dati e Riferimenti",
+    "text": "Questo sito è un progetto indipendente di terze parti a scopo informativo turistico. Le informazioni sono tratte da fonti pubbliche, tra cui l'Ufficio Turistico del Trentino, Wikipedia e Google Maps. Le fotografie provengono da Unsplash. Questo sito non è affiliato con alcun ente ufficiale.",
+    "items": [
+      "Google Maps — Dati sulla posizione e recensioni",
+      "Unsplash — Fotografie utilizzate nella galleria",
+      "Trentino Tourism — Informazioni turistiche generali"
+    ]
+  },
+  "footer": {
+    "support": "Per supporto tecnico su questo sito, contattare:",
+    "rights": "© 2026 Spiaggia Sabbioni · Tutti i diritti riservati.",
+    "disclaimer": "Sito informativo indipendente, non affiliato con enti ufficiali."
+  },
+  "theme": {
+    "light": "Modalità chiara",
+    "dark": "Modalità scura"
+  },
+  "privacy": {
+    "title": "Informativa sulla Privacy",
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
+    "sections": [
+      {
+        "heading": "Raccolta dei Dati",
+        "content": "Questo sito raccoglie dati minimi di navigazione attraverso cookie tecnici necessari al funzionamento. Non raccogliamo dati personali identificabili a meno che non ci contattiate direttamente via email."
+      },
+      {
+        "heading": "Cookie",
+        "content": "Utilizziamo cookie tecnici per il funzionamento del sito (preferenza lingua e tema). Cookie analitici di terze parti possono essere utilizzati per comprendere il traffico del sito. Potete gestire le preferenze sui cookie nella pagina dedicata."
+      },
+      {
+        "heading": "Servizi di Terze Parti",
+        "content": "Questo sito incorpora Google Maps e immagini da Unsplash. Questi servizi possono raccogliere dati secondo le proprie informative sulla privacy."
+      },
+      {
+        "heading": "Contatti",
+        "content": "Per qualsiasi domanda sulla privacy, contattare: claritleonelmnicol@gmail.com"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Termini di Servizio",
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
+    "sections": [
+      {
+        "heading": "Utilizzo del Sito",
+        "content": "Questo sito è fornito a scopo informativo. I contenuti si basano su fonti pubbliche e potrebbero non essere sempre aggiornati. Si prega di verificare le informazioni presso le fonti ufficiali prima di pianificare la visita."
+      },
+      {
+        "heading": "Proprietà Intellettuale",
+        "content": "I contenuti testuali sono di proprietà di questo sito. Le fotografie sono fornite da Unsplash secondo le rispettive licenze. Google Maps è incorporato secondo i termini di servizio di Google."
+      },
+      {
+        "heading": "Limitazione di Responsabilità",
+        "content": "Non garantiamo l'accuratezza, la completezza o l'attualità delle informazioni fornite. L'uso del sito è a proprio rischio."
+      },
+      {
+        "heading": "Contatti",
+        "content": "Per domande sui termini di servizio: claritleonelmnicol@gmail.com"
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Impostazioni Cookie",
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
+    "description": "Gestisci le tue preferenze sui cookie per questo sito.",
+    "necessary": {
+      "title": "Cookie Necessari",
+      "description": "Essenziali per il funzionamento del sito. Includono le preferenze di lingua e tema. Non possono essere disabilitati.",
+      "status": "Sempre attivi"
+    },
+    "analytics": {
+      "title": "Cookie Analitici",
+      "description": "Ci aiutano a capire come i visitatori utilizzano il sito, permettendoci di migliorare i contenuti e l'esperienza utente."
+    },
+    "marketing": {
+      "title": "Cookie di Marketing",
+      "description": "Utilizzati per mostrare annunci pertinenti. Questo sito attualmente non utilizza cookie di marketing."
+    },
+    "save": "Salva Preferenze"
+  }
+}
