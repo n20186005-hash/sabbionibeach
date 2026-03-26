@@ -9,7 +9,12 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-[85vh] flex items-center justify-center section-padding pt-24"
-      style={{ background: 'var(--bg-primary)' }}
+      style={{ 
+        background: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("/gallery/images%20(1).jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       <div className="max-w-3xl mx-auto text-center">
         <h1

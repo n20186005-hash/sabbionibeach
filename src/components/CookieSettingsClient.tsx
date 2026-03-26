@@ -26,9 +26,12 @@ export default function CookieSettingsClient() {
   }, []);
 
   const handleSave = () => {
-    localStorage.setItem('cookiePrefs', JSON.stringify({ analytics, marketing }));
+    localStorage.setItem(
+      'cookiePrefs',
+      JSON.stringify({ analytics, marketing })
+    );
     setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    setTimeout(() => setSaved(false), 3000);
   };
 
   return (
@@ -51,52 +54,60 @@ export default function CookieSettingsClient() {
           <h1 className="font-display text-3xl md:text-4xl mb-2" style={{ color: 'var(--text-primary)' }}>
             {t('title')}
           </h1>
-          <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
+          <p className="text-sm mb-10" style={{ color: 'var(--text-muted)' }}>
             {t('lastUpdated')}
           </p>
-          <p className="text-sm mb-10 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+
+          <p className="mb-8" style={{ color: 'var(--text-secondary)' }}>
             {t('description')}
           </p>
 
-          <div className="p-5 rounded-xl mb-4" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)' }}>
-            <div className="flex items-center justify-between">
-              <div>
+          <div className="space-y-6">
+            <div className="p-6 rounded-xl" style={{ background: 'var(--bg-secondary)' }}>
+              <div className="flex items-center justify-between mb-2">
                 <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{t('necessary.title')}</h3>
-                <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>{t('necessary.description')}</p>
+                <span className="text-sm font-medium" style={{ color: 'var(--accent)' }}>{t('necessary.status')}</span>
               </div>
-              <span className="text-xs font-medium px-3 py-1 rounded-full flex-shrink-0 ml-4" style={{ background: 'var(--tag-bg)', color: 'var(--accent)' }}>
-                {t('necessary.status')}
-              </span>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('necessary.description')}</p>
             </div>
-          </div>
 
-          <div className="p-5 rounded-xl mb-4" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)' }}>
-            <div className="flex items-center justify-between">
-              <div>
+            <div className="p-6 rounded-xl" style={{ background: 'var(--bg-secondary)' }}>
+              <div className="flex items-center justify-between mb-2">
                 <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{t('analytics.title')}</h3>
-                <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>{t('analytics.description')}</p>
+                <div 
+                  className={`toggle-switch ${analytics ? 'active' : ''}`}
+                  onClick={() => setAnalytics(!analytics)}
+                ></div>
               </div>
-              <button onClick={() => setAnalytics(!analytics)} className={`toggle-switch flex-shrink-0 ml-4 ${analytics ? 'active' : ''}`} aria-label="Toggle analytics" />
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('analytics.description')}</p>
             </div>
-          </div>
 
-          <div className="p-5 rounded-xl mb-8" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)' }}>
-            <div className="flex items-center justify-between">
-              <div>
+            <div className="p-6 rounded-xl" style={{ background: 'var(--bg-secondary)' }}>
+              <div className="flex items-center justify-between mb-2">
                 <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{t('marketing.title')}</h3>
-                <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>{t('marketing.description')}</p>
+                <div 
+                  className={`toggle-switch ${marketing ? 'active' : ''}`}
+                  onClick={() => setMarketing(!marketing)}
+                ></div>
               </div>
-              <button onClick={() => setMarketing(!marketing)} className={`toggle-switch flex-shrink-0 ml-4 ${marketing ? 'active' : ''}`} aria-label="Toggle marketing" />
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('marketing.description')}</p>
             </div>
           </div>
 
-          <button
-            onClick={handleSave}
-            className="px-6 py-3 rounded-lg text-sm font-semibold transition-all"
-            style={{ background: saved ? '#22c55e' : 'var(--accent)', color: '#FFFFFF' }}
-          >
-            {saved ? '✓' : t('save')}
-          </button>
+          <div className="mt-10 flex items-center gap-4">
+            <button
+              onClick={handleSave}
+              className="px-6 py-3 rounded-lg font-medium transition-opacity"
+              style={{ background: 'var(--accent)', color: '#fff' }}
+            >
+              {t('save')}
+            </button>
+            {saved && (
+              <span className="text-sm" style={{ color: 'var(--accent)' }}>
+                ✓ Saved
+              </span>
+            )}
+          </div>
         </div>
       </main>
       <Footer />

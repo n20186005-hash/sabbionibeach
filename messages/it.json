@@ -97,46 +97,46 @@
     "dark": "Modalità scura"
   },
   "privacy": {
-    "title": "Informativa sulla Privacy",
+    "title": "Informativa sulla privacy",
     "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
     "sections": [
       {
-        "heading": "Raccolta dei Dati",
-        "content": "Questo sito raccoglie dati minimi di navigazione attraverso cookie tecnici necessari al funzionamento. Non raccogliamo dati personali identificabili a meno che non ci contattiate direttamente via email."
+        "heading": "1. Raccolta delle informazioni",
+        "content": "Ci impegniamo a proteggere la tua privacy. Questo sito funge principalmente da piattaforma informativa e generalmente non raccoglie attivamente informazioni di identificazione personale dagli utenti. Tuttavia, attraverso i log del server e gli strumenti di analisi, potremmo raccogliere informazioni non identificabili personalmente come il tipo di browser, i tempi di accesso e le registrazioni delle visualizzazioni di pagina."
       },
       {
-        "heading": "Cookie",
-        "content": "Utilizziamo cookie tecnici per il funzionamento del sito (preferenza lingua e tema). Cookie analitici di terze parti possono essere utilizzati per comprendere il traffico del sito. Potete gestire le preferenze sui cookie nella pagina dedicata."
+        "heading": "2. Uso dei cookie",
+        "content": "Per offrire una migliore esperienza utente e comprendere come viene utilizzato il sito, potremmo utilizzare i cookie. Questi cookie vengono utilizzati per ricordare le preferenze dell'utente e analizzare il traffico del sito. Puoi regolare le impostazioni dei cookie nel tuo browser."
       },
       {
-        "heading": "Servizi di Terze Parti",
-        "content": "Questo sito incorpora Google Maps e immagini da Unsplash. Questi servizi possono raccogliere dati secondo le proprie informative sulla privacy."
+        "heading": "3. Link di terze parti",
+        "content": "Questo sito può contenere link a siti di terze parti (es. Google Maps). Non siamo responsabili per le pratiche sulla privacy di questi siti esterni. Ti invitiamo a leggere le dichiarazioni sulla privacy di qualsiasi sito che raccoglie informazioni personali quando lasci il nostro sito."
       },
       {
-        "heading": "Contatti",
-        "content": "Per qualsiasi domanda sulla privacy, contattare: claritleonelmnicol@gmail.com"
+        "heading": "4. Contattaci",
+        "content": "In caso di domande o dubbi in merito a questa informativa sulla privacy, contattaci all'indirizzo: claritleonelmnicol@gmail.com"
       }
     ]
   },
   "terms": {
-    "title": "Termini di Servizio",
+    "title": "Termini di servizio",
     "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
     "sections": [
       {
-        "heading": "Utilizzo del Sito",
-        "content": "Questo sito è fornito a scopo informativo. I contenuti si basano su fonti pubbliche e potrebbero non essere sempre aggiornati. Si prega di verificare le informazioni presso le fonti ufficiali prima di pianificare la visita."
+        "heading": "1. Accettazione dei termini",
+        "content": "Accedendo e utilizzando questo sito web, accetti di essere vincolato da questi termini di servizio. Se non accetti alcuna parte di questi termini, ti preghiamo di non utilizzare il nostro sito."
       },
       {
-        "heading": "Proprietà Intellettuale",
-        "content": "I contenuti testuali sono di proprietà di questo sito. Le fotografie sono fornite da Unsplash secondo le rispettive licenze. Google Maps è incorporato secondo i termini di servizio di Google."
+        "heading": "2. Uso dei contenuti",
+        "content": "Le informazioni fornite su questo sito web sono solo a scopo informativo generale. Sebbene ci sforziamo di mantenere le informazioni accurate e aggiornate, non rilasciamo alcuna dichiarazione o garanzia di alcun tipo, esplicita o implicita, in merito alla completezza, accuratezza, affidabilità o idoneità delle informazioni."
       },
       {
-        "heading": "Limitazione di Responsabilità",
-        "content": "Non garantiamo l'accuratezza, la completezza o l'attualità delle informazioni fornite. L'uso del sito è a proprio rischio."
+        "heading": "3. Proprietà intellettuale",
+        "content": "Salvo diversa indicazione, tutti i contenuti di questo sito (inclusi testi, immagini, loghi) sono protetti da copyright. Nessuna riproduzione, distribuzione o uso commerciale è consentito senza esplicita autorizzazione. I crediti fotografici possono includere risorse royalty-free da piattaforme come Unsplash o contributori su Google Maps."
       },
       {
-        "heading": "Contatti",
-        "content": "Per domande sui termini di servizio: claritleonelmnicol@gmail.com"
+        "heading": "4. Limitazione di responsabilità",
+        "content": "Nella misura massima consentita dalla legge, questo sito e i suoi proprietari non saranno responsabili per eventuali danni diretti, indiretti, accidentali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare questo sito. Quando visiti siti naturali, ti preghiamo di dare sempre priorità alla sicurezza."
       }
     ]
   },

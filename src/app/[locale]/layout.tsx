@@ -17,11 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const baseUrl = 'https://sabbionibeach.com';
+  const baseUrl = 'https://www.sabbionibeach.com';
   const alternateLanguages: Record<string, string> = {};
+  
   locales.forEach((loc) => {
     alternateLanguages[loc] = loc === defaultLocale ? baseUrl : `${baseUrl}/${loc}`;
   });
+  alternateLanguages['x-default'] = baseUrl;
 
   return {
     title: t('title'),
@@ -44,15 +46,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {locales.map((loc) => (
-          <link
-            key={loc}
-            rel="alternate"
-            hrefLang={loc}
-            href={loc === defaultLocale ? 'https://sabbionibeach.com' : `https://sabbionibeach.com/${loc}`}
-          />
-        ))}
-        <link rel="alternate" hrefLang="x-default" href="https://sabbionibeach.com" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9279583389810634" crossOrigin="anonymous"></script>
+        <meta name="google-adsense-account" content="ca-pub-9279583389810634" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
