@@ -44,7 +44,9 @@
       { "src": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80", "caption": "環繞湖泊的群山" },
       { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "夏日沙灘" },
       { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "湖上水上運動" }
-    ]
+    ],
+    "sourceText": "Spiaggia Sabbioni 於 {year} 年拍攝的照片。",
+    "viewAllOnMaps": "在 Google 地圖上查看全部"
   },
   "reviews": {
     "title": "真實遊客評價",

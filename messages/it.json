@@ -44,7 +44,9 @@
       { "src": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80", "caption": "Montagne che circondano il lago" },
       { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "Giornata estiva in spiaggia" },
       { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "Sport acquatici sul lago" }
-    ]
+    ],
+    "sourceText": "Foto della Spiaggia Sabbioni scattate nel {year}.",
+    "viewAllOnMaps": "Vedi tutto su Google Maps"
   },
   "reviews": {
     "title": "Recensioni dei Visitatori",
