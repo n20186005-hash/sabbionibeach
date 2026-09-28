@@ -44,7 +44,9 @@
       { "src": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80", "caption": "Mountains surrounding the lake" },
       { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "Summer day at the beach" },
       { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "Water sports on the lake" }
-    ]
+    ],
+    "sourceText": "Photos of Spiaggia Sabbioni taken in {year}.",
+    "viewAllOnMaps": "View all on Google Maps"
   },
   "reviews": {
     "title": "Real Visitor Reviews",
