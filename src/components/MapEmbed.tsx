@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
-
-const MAPS_LINK = 'https://maps.app.goo.gl/ziD9juwpMmLJxGcn8';
+import { GOOGLE_MAPS_URL } from '@/lib/site';
 const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.5030553365928!2d10.846444177130653!3d45.881251071083845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478217c4ea09c03f%3A0x7b767de88421b5a2!2sSpiaggia%20Sabbioni!5e0!3m2!1sen!2sus!4v1774448137578!5m2!1sen!2sus';
 
 export default function MapEmbed() {
@@ -36,7 +35,7 @@ export default function MapEmbed() {
 
         <div className="text-center mt-6">
           <a
-            href={MAPS_LINK}
+            href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"

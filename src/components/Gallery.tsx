@@ -1,32 +1,115 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { GOOGLE_MAPS_URL } from '@/lib/site';
 
-const galleryImages = [
-  { src: '/gallery/images (1).jpg', caption: 'Spiaggia Sabbioni View 1' },
-  { src: '/gallery/images (2).jpg', caption: 'Spiaggia Sabbioni View 2' },
-  { src: '/gallery/images (3).jpg', caption: 'Spiaggia Sabbioni View 3' },
-  { src: '/gallery/images (4).jpg', caption: 'Spiaggia Sabbioni View 4' },
-  { src: '/gallery/images (5).jpg', caption: 'Spiaggia Sabbioni View 5' },
-  { src: '/gallery/images (6).jpg', caption: 'Spiaggia Sabbioni View 6' },
-  { src: '/gallery/images (7).jpg', caption: 'Spiaggia Sabbioni View 7' },
-  { src: '/gallery/images (8).jpg', caption: 'Spiaggia Sabbioni View 8' },
-  { src: '/gallery/images (9).jpg', caption: 'Spiaggia Sabbioni View 9' },
-  { src: '/gallery/images (10).jpg', caption: 'Spiaggia Sabbioni View 10' },
-  { src: '/gallery/images (11).jpg', caption: 'Spiaggia Sabbioni View 11' },
-  { src: '/gallery/images (12).jpg', caption: 'Spiaggia Sabbioni View 12' },
-  { src: '/gallery/images (13).jpg', caption: 'Spiaggia Sabbioni View 13' },
-  { src: '/gallery/images (14).jpg', caption: 'Spiaggia Sabbioni View 14' },
-  { src: '/gallery/images (15).jpg', caption: 'Spiaggia Sabbioni View 15' },
-  { src: '/gallery/images (16).jpg', caption: 'Spiaggia Sabbioni View 16' },
-];
+const gallerySources = [
+  '/gallery/images (1).jpg',
+  '/gallery/images (2).jpg',
+  '/gallery/images (3).jpg',
+  '/gallery/images (4).jpg',
+  '/gallery/images (5).jpg',
+  '/gallery/images (6).jpg',
+  '/gallery/images (7).jpg',
+  '/gallery/images (8).jpg',
+  '/gallery/images (9).jpg',
+  '/gallery/images (10).jpg',
+  '/gallery/images (11).jpg',
+  '/gallery/images (12).jpg',
+  '/gallery/images (13).jpg',
+  '/gallery/images (14).jpg',
+  '/gallery/images (15).jpg',
+  '/gallery/images (16).jpg',
+] as const;
+
+const captionsByLocale = {
+  it: [
+    'Spiaggia Sabbioni a Riva del Garda con vista sul Lago di Garda',
+    'Lungolago vicino alla Spiaggia Sabbioni',
+    'Zona balneazione di Spiaggia Sabbioni',
+    'Panorama delle montagne sopra Spiaggia Sabbioni',
+    'Spiaggia Sabbioni con area relax sul lago',
+    'Vista aperta del litorale di Spiaggia Sabbioni',
+    'Passeggiata sul lungolago di Riva del Garda',
+    'Acqua limpida alla Spiaggia Sabbioni',
+    'Spiaggia dei Sabbioni in una giornata soleggiata',
+    'Dettaglio della spiaggia di ciottoli a Riva del Garda',
+    'Famiglie e visitatori alla Spiaggia Sabbioni',
+    'Vista del lago e delle montagne dalla spiaggia',
+    'Angolo panoramico vicino a Spiaggia Sabbioni',
+    'Riva del Garda e il litorale dei Sabbioni',
+    'Passeggiata e servizi vicino alla spiaggia',
+    'Spiaggia Sabbioni al tramonto sul Lago di Garda',
+  ],
+  en: [
+    'Spiaggia Sabbioni in Riva del Garda overlooking Lake Garda',
+    'Lakeside promenade near Spiaggia Sabbioni',
+    'Swimming area at Spiaggia Sabbioni',
+    'Mountain panorama above Spiaggia Sabbioni',
+    'Spiaggia Sabbioni lakeside relaxation area',
+    'Open shoreline view at Spiaggia Sabbioni',
+    'Promenade walk in Riva del Garda',
+    'Clear water at Spiaggia Sabbioni',
+    'Spiaggia dei Sabbioni on a sunny day',
+    'Pebble beach detail in Riva del Garda',
+    'Families and visitors at Spiaggia Sabbioni',
+    'Lake and mountain view from the beach',
+    'Scenic corner near Spiaggia Sabbioni',
+    'Riva del Garda waterfront by Sabbioni Beach',
+    'Walkway and services near the beach',
+    'Spiaggia Sabbioni at sunset on Lake Garda',
+  ],
+  de: [
+    'Spiaggia Sabbioni in Riva del Garda mit Blick auf den Gardasee',
+    'Uferpromenade nahe der Spiaggia Sabbioni',
+    'Badebereich an der Spiaggia Sabbioni',
+    'Bergpanorama oberhalb der Spiaggia Sabbioni',
+    'Ruhebereich an der Spiaggia Sabbioni am See',
+    'Offener Uferblick an der Spiaggia Sabbioni',
+    'Spazierweg an der Promenade von Riva del Garda',
+    'Klares Wasser an der Spiaggia Sabbioni',
+    'Spiaggia dei Sabbioni an einem sonnigen Tag',
+    'Detail des Kiesstrands in Riva del Garda',
+    'Familien und Besucher an der Spiaggia Sabbioni',
+    'Blick auf See und Berge vom Strand',
+    'Panoramapunkt nahe der Spiaggia Sabbioni',
+    'Uferbereich von Riva del Garda bei Sabbioni',
+    'Weg und Service in Strandnähe',
+    'Spiaggia Sabbioni bei Sonnenuntergang am Gardasee',
+  ],
+  'zh-Hant': [
+    '里瓦德爾加爾達 Spiaggia Sabbioni 與加爾達湖景觀',
+    'Spiaggia Sabbioni 附近的湖濱步道',
+    'Spiaggia Sabbioni 的游泳區域',
+    'Spiaggia Sabbioni 上方的山景全景',
+    'Spiaggia Sabbioni 湖畔休憩區',
+    'Spiaggia Sabbioni 開闊湖岸景色',
+    '里瓦德爾加爾達湖濱散步道',
+    'Spiaggia Sabbioni 清澈的湖水',
+    '晴天中的 Spiaggia dei Sabbioni',
+    '里瓦德爾加爾達礫石沙灘細節',
+    'Spiaggia Sabbioni 的家庭與遊客區域',
+    '從沙灘望向湖泊與群山的景色',
+    'Spiaggia Sabbioni 附近的觀景角落',
+    '里瓦德爾加爾達 Sabbioni 湖岸',
+    '沙灘附近的步道與設施',
+    '加爾達湖畔黃昏時的 Spiaggia Sabbioni',
+  ],
+} as const;
 
 export default function Gallery() {
   const t = useTranslations('gallery');
+  const locale = useLocale() as keyof typeof captionsByLocale;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; caption: string } | null>(null);
+
+  const captions = captionsByLocale[locale] ?? captionsByLocale.en;
+  const galleryImages = gallerySources.map((src, index) => ({
+    src,
+    caption: captions[index] ?? captionsByLocale.en[index],
+  }));
 
   const itemsPerPage = 6;
   const totalPages = Math.ceil(galleryImages.length / itemsPerPage);
@@ -39,14 +122,14 @@ export default function Gallery() {
     setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
-  const openModal = (src: string) => {
-    setSelectedImage(src);
+  const openModal = (src: string, caption: string) => {
+    setSelectedImage({ src, caption });
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setSelectedImage(null);
     setIsModalOpen(false);
+    setSelectedImage(null);
   };
 
   const currentImages = galleryImages.slice(
@@ -76,7 +159,7 @@ export default function Gallery() {
               <div 
                 key={i} 
                 className="relative group overflow-hidden rounded-lg cursor-pointer"
-                onClick={() => openModal(photo.src)}
+                onClick={() => openModal(photo.src, photo.caption)}
               >
                 <img
                   src={photo.src}
@@ -108,7 +191,7 @@ export default function Gallery() {
             </button>
             
             <a 
-              href="https://maps.app.goo.gl/RrA7BBiR2AGERVzbA" 
+              href={GOOGLE_MAPS_URL}
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm font-medium hover:underline flex items-center gap-2"
@@ -150,8 +233,8 @@ export default function Gallery() {
               </svg>
             </button>
             <img 
-              src={selectedImage} 
-              alt="Original size" 
+              src={selectedImage.src}
+              alt={selectedImage.caption}
               className="max-w-full max-h-[90vh] object-contain rounded"
               onClick={(e) => e.stopPropagation()}
             />

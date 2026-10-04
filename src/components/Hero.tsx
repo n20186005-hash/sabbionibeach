@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
-
-const MAPS_LINK = 'https://maps.app.goo.gl/ziD9juwpMmLJxGcn8';
+import { GOOGLE_MAPS_URL } from '@/lib/site';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -50,7 +49,7 @@ export default function Hero() {
         </div>
 
         <a
-          href={MAPS_LINK}
+          href={GOOGLE_MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-lg animate-fade-in-up animate-delay-3"

@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Spiaggia Sabbioni Riva del Garda: Fotos, Parken und Infos",
+    "description": "Guide zur Spiaggia Sabbioni in Riva del Garda mit Fotos, Parktipps, Service, Anreise, Infos zum freien Strand und praktischen Besuchshinweisen."
+  },
+  "nav": {
+    "home": "Startseite",
+    "gallery": "Fotos",
+    "reviews": "Bewertungen",
+    "map": "Karte",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookies",
+    "backHome": "Zurück zur Startseite"
+  },
+  "hero": {
+    "title": "Spiaggia Sabbioni - Riva del Garda",
+    "subtitle": "Beliebter freier Strand am Gardasee mit Fotos, Parken, Service und praktischen Tipps",
+    "rating": "4.6/5",
+    "ratingCount": "(6.465 Bewertungen)",
+    "hours": "Rund um die Uhr geöffnet",
+    "viewOnMap": "Auf Google Maps ansehen",
+    "tags": ["Strand", "Gardasee", "Familie", "Schwimmen", "Panorama", "Entspannung"]
+  },
+  "intro": {
+    "title": "Infos zur Spiaggia Sabbioni",
+    "description": "Die Spiaggia Sabbioni, oft auch als Spiaggia dei Sabbioni gesucht, ist der bekannteste freie Strand in Riva del Garda am Gardasee. Hier findest du schnell Fotos, Parkinfos, Service, den Fußweg aus der Altstadt, Hinweise für Familien und praktische Informationen vor dem Besuch.",
+    "highlights": [
+      "Freier Kiesstrand mit viel Platz",
+      "Panoramablick auf Alpen und Gardasee",
+      "Gut für Familien mit Kindern geeignet",
+      "Nahe am historischen Zentrum von Riva del Garda",
+      "Toiletten und Duschen vorhanden",
+      "Beliebt zum Schwimmen, Windsurfen und Segeln"
+    ]
+  },
+  "gallery": {
+    "title": "Fotos der Spiaggia Sabbioni",
+    "subtitle": "Blicke auf Ufer, Promenade und Badebereich in Riva del Garda",
+    "photos": [
+      { "src": "https://images.unsplash.com/photo-1596627116790-af6f46dddbab?w=800&q=80", "caption": "Panoramablick auf den Gardasee" },
+      { "src": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80", "caption": "Klares Wasser am Strand" },
+      { "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80", "caption": "Strand bei Sonnenuntergang" },
+      { "src": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80", "caption": "Berge rund um den See" },
+      { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "Sommertag am Strand" },
+      { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "Wassersport am See" }
+    ],
+    "sourceText": "Fotos und Ansichten der Spiaggia Sabbioni, aktualisiert im Oktober {year}.",
+    "viewAllOnMaps": "Alle auf Google Maps ansehen"
+  },
+  "reviews": {
+    "title": "Bewertungen zur Spiaggia Sabbioni",
+    "declaration": "Bewertungen und Rezensionen stammen von Google Maps (letzte Aktualisierung: Oktober 2026). Der Strand hat aktuell 4,6/5 bei 6.465 Bewertungen. Unten findest du eine Auswahl mit Hinweisen zu Aussicht, Besucheraufkommen, Wasserqualität und Service.",
+    "moreReviews": "Weitere Bewertungen auf Google Maps ansehen",
+    "items": [
+      { "name": "Marco R.", "date": "August 2025", "stars": 5, "text": "Wunderschöner Strand mit spektakulärem Bergblick. Sauberes, klares Wasser. Perfekt für Familien." },
+      { "name": "Anna L.", "date": "Juli 2025", "stars": 5, "text": "Ein wunderbarer Ort zum Entspannen. Der Strand ist groß und gepflegt. Die Einrichtungen sind gut." },
+      { "name": "Giovanni B.", "date": "September 2025", "stars": 4, "text": "Toller Strand, in der Hochsaison etwas voll, aber auf jeden Fall einen Besuch wert. Fantastische Aussicht." },
+      { "name": "Lucia F.", "date": "Juni 2025", "stars": 5, "text": "Der beste Strand am Gardasee! Leicht erreichbar, nahe am Zentrum. Sehr empfehlenswert." },
+      { "name": "Paolo M.", "date": "August 2025", "stars": 5, "text": "Fantastischer Ort. Das Wasser ist glasklar und der Bergblick ist einmalig. Wir kommen sicher wieder." },
+      { "name": "Elena V.", "date": "Juli 2025", "stars": 4, "text": "Kieselstrand, also am besten Wasserschuhe mitnehmen. Die Landschaft macht aber alles wett. Wunderschön." },
+      { "name": "Roberto C.", "date": "September 2025", "stars": 5, "text": "Ein echtes Juwel. Perfekt für alle, die Ruhe und Natur suchen. Der Sonnenuntergang hier ist magisch." },
+      { "name": "Chiara N.", "date": "August 2025", "stars": 5, "text": "Ich liebe diesen Strand! Wir kommen jeden Sommer hierher. Ideal für Kinder und alle, die gerne schwimmen." }
+    ]
+  },
+  "tips": {
+    "title": "Parken, Service und Besuchstipps",
+    "subtitle": "Die häufigsten praktischen Fragen vor einem Besuch an der Spiaggia Sabbioni",
+    "items": [
+      { "title": "Beste Reisezeit", "content": "Von Juni bis September ist Schwimmen am besten. Im Mai und Oktober ist es oft ruhiger und das Wetter bleibt angenehm." },
+      { "title": "Parken in der Nähe", "content": "In der Umgebung gibt es kostenpflichtige Parkmöglichkeiten und Stellplätze, von denen aus der Strand in wenigen Minuten zu Fuß erreichbar ist." },
+      { "title": "Anreise", "content": "Vom Zentrum von Riva del Garda erreichst du den Strand bequem zu Fuß über die Uferpromenade; auch mit dem Fahrrad ist die Lage praktisch." },
+      { "title": "Service am Strand", "content": "Besucher suchen hier vor allem nach Toiletten, Duschen, offenen Ruhebereichen und ausreichend Platz für einen längeren Tag am See." },
+      { "title": "Familien und Kinder", "content": "Die Spiaggia Sabbioni gilt dank guter Erreichbarkeit, viel Platz und ruhigerem Wasser am Ufer als besonders familienfreundlich." },
+      { "title": "Was mitnehmen", "content": "Wasserschuhe sind auf dem Kies sehr sinnvoll, dazu Sonnencreme, Trinkwasser und alles für einen längeren Aufenthalt am Strand." }
+    ]
+  },
+  "map": {
+    "title": "So kommst du zur Spiaggia Sabbioni",
+    "address": "Via Cristoph Hartung Von Hartungen, 4, 38066 Riva del Garda TN, Italien",
+    "openInMaps": "In Google Maps öffnen"
+  },
+  "relatedGuides": {
+    "title": "Nützliche Guides als Nächstes",
+    "subtitle": "Zusätzliche Seiten zu den häufigsten Suchanfragen rund um Spiaggia Sabbioni und Riva del Garda",
+    "parkingTitle": "Parken an der Spiaggia Sabbioni",
+    "parkingDescription": "Wo man parkt, wie weit man zu Fuß geht und was in der Hochsaison zu erwarten ist.",
+    "beachesTitle": "Strände in Riva del Garda",
+    "beachesDescription": "Ein schneller Vergleich zwischen Spiaggia Sabbioni, Pini Beach und weiteren Strandbereichen am Gardasee.",
+    "photosTitle": "Fotos der Spiaggia Sabbioni",
+    "photosDescription": "Eine eigene Fotoseite mit Strand, Promenade, Seeblick und nützlichen Aussichtspunkten.",
+    "reviewsTitle": "Bewertungen zur Spiaggia Sabbioni",
+    "reviewsDescription": "Praktische Zusammenfassung von Meinungen zu Aussicht, Andrang, Familienfreundlichkeit, Kiesstrand und Gesamteindruck."
+  },
+  "sources": {
+    "title": "Daten und Quellen",
+    "text": "Diese Website ist ein unabhängiges Drittanbieterprojekt zu touristischen Informationszwecken. Die Informationen stammen aus öffentlichen Quellen wie dem Tourismusbüro Trentino, Wikipedia und Google Maps. Die Fotos stammen von Unsplash. Diese Website ist mit keiner offiziellen Stelle verbunden.",
+    "items": [
+      "Google Maps — Standortdaten und Bewertungen",
+      "Unsplash — In der Galerie verwendete Fotos",
+      "Trentino Tourism — Allgemeine touristische Informationen"
+    ]
+  },
+  "footer": {
+    "support": "Für technischen Support zu dieser Website kontaktiere bitte:",
+    "rights": "© 2026 Spiaggia Sabbioni · Alle Rechte vorbehalten.",
+    "disclaimer": "Unabhängige Informationsseite, nicht mit offiziellen Stellen verbunden."
+  },
+  "theme": {
+    "light": "Heller Modus",
+    "dark": "Dunkler Modus"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "sections": [
+      {
+        "heading": "1. Erhebung von Informationen",
+        "content": "Wir möchten deine Privatsphäre schützen. Diese Website dient in erster Linie als Informationsplattform und erhebt in der Regel keine aktiv identifizierbaren personenbezogenen Daten. Über Server-Logs und Analysewerkzeuge können jedoch nicht personenbezogene Informationen wie Browsertyp, Zugriffszeiten und Seitenaufrufe erfasst werden."
+      },
+      {
+        "heading": "2. Verwendung von Cookies",
+        "content": "Um eine bessere Nutzererfahrung zu bieten und zu verstehen, wie die Website verwendet wird, können wir Cookies einsetzen. Diese dienen dazu, Nutzereinstellungen zu speichern und den Website-Traffic zu analysieren. Du kannst die Cookie-Einstellungen in deinem Browser anpassen."
+      },
+      {
+        "heading": "3. Links zu Drittanbietern",
+        "content": "Diese Website kann Links zu Websites Dritter enthalten, zum Beispiel zu Google Maps. Für die Datenschutzpraktiken dieser externen Seiten übernehmen wir keine Verantwortung. Bitte lies die Datenschutzhinweise jeder Website, die personenbezogene Daten erhebt, wenn du unsere Seite verlässt."
+      },
+      {
+        "heading": "4. Kontakt",
+        "content": "Wenn du Fragen oder Bedenken zu dieser Datenschutzerklärung hast, kontaktiere uns bitte unter: claritleonelmnicol@gmail.com"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "sections": [
+      {
+        "heading": "1. Annahme der Bedingungen",
+        "content": "Durch den Zugriff auf diese Website und ihre Nutzung erklärst du dich mit diesen Nutzungsbedingungen einverstanden. Wenn du einem Teil dieser Bedingungen nicht zustimmst, verwende unsere Website bitte nicht."
+      },
+      {
+        "heading": "2. Nutzung der Inhalte",
+        "content": "Die Informationen auf dieser Website dienen ausschließlich allgemeinen Informationszwecken. Obwohl wir uns bemühen, die Informationen korrekt und aktuell zu halten, übernehmen wir keinerlei ausdrückliche oder stillschweigende Gewähr für Vollständigkeit, Richtigkeit, Zuverlässigkeit oder Eignung der Inhalte."
+      },
+      {
+        "heading": "3. Geistiges Eigentum",
+        "content": "Soweit nicht anders angegeben, sind alle Inhalte dieser Website, einschließlich Texte, Bilder und Logos, urheberrechtlich geschützt. Eine Vervielfältigung, Verbreitung oder kommerzielle Nutzung ohne ausdrückliche Genehmigung ist nicht gestattet. Bildnachweise können lizenzfreie Ressourcen von Plattformen wie Unsplash oder Beiträge auf Google Maps umfassen."
+      },
+      {
+        "heading": "4. Haftungsbeschränkung",
+        "content": "Soweit gesetzlich zulässig, haften diese Website und ihre Betreiber nicht für direkte, indirekte, zufällige oder Folgeschäden, die aus der Nutzung oder Nichtnutzbarkeit dieser Website entstehen. Bitte denke bei Besuchen in der Natur immer zuerst an die Sicherheit."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie-Einstellungen",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "description": "Verwalte deine Cookie-Einstellungen für diese Website.",
+    "necessary": {
+      "title": "Notwendige Cookies",
+      "description": "Unverzichtbar für den Betrieb der Website. Dazu gehören Sprach- und Theme-Einstellungen. Sie können nicht deaktiviert werden.",
+      "status": "Immer aktiv"
+    },
+    "analytics": {
+      "title": "Analyse-Cookies",
+      "description": "Sie helfen uns zu verstehen, wie Besucher die Website nutzen, damit wir Inhalte und Nutzererfahrung verbessern können."
+    },
+    "marketing": {
+      "title": "Marketing-Cookies",
+      "description": "Werden verwendet, um relevante Werbung anzuzeigen. Diese Website verwendet derzeit keine Marketing-Cookies."
+    },
+    "save": "Einstellungen speichern"
+  }
+}

@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
-
-const MAPS_LINK = 'https://maps.app.goo.gl/ziD9juwpMmLJxGcn8';
+import { GOOGLE_MAPS_URL } from '@/lib/site';
 
 type Review = {
   name: string;
@@ -68,7 +67,7 @@ export default function Reviews() {
 
         <div className="text-center mt-8">
           <a
-            href={MAPS_LINK}
+            href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium transition-colors"

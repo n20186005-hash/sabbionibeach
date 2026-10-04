@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Spiaggia Sabbioni | Riva del Garda - Guida Turistica",
-    "description": "Guida completa alla Spiaggia Sabbioni a Riva del Garda. Informazioni, foto, recensioni e consigli pratici per la tua visita."
+    "title": "Spiaggia Sabbioni Riva del Garda: Foto, Parcheggio e Info",
+    "description": "Guida alla Spiaggia Sabbioni di Riva del Garda: foto, parcheggio, servizi, come arrivare, spiaggia libera, consigli e informazioni per la visita."
   },
   "nav": {
     "home": "Home",
@@ -14,17 +14,17 @@
     "backHome": "Torna alla Home"
   },
   "hero": {
-    "title": "Spiaggia Sabbioni",
-    "subtitle": "La spiaggia più amata di Riva del Garda",
+    "title": "Spiaggia Sabbioni - Riva del Garda",
+    "subtitle": "Spiaggia libera sul Lago di Garda con foto, parcheggio, servizi e consigli pratici",
     "rating": "4.6/5",
-    "ratingCount": "(6.157 recensioni)",
+    "ratingCount": "(6.465 recensioni)",
     "hours": "Aperto 24h/24",
     "viewOnMap": "Vedi su Google Maps",
     "tags": ["Spiaggia", "Lago di Garda", "Famiglia", "Nuoto", "Panorama", "Relax"]
   },
   "intro": {
-    "title": "Panoramica",
-    "description": "Spiaggia Sabbioni è una delle spiagge più popolari e accessibili sul Lago di Garda, situata a Riva del Garda nella Provincia Autonoma di Trento. Offre una vista mozzafiato sulle montagne circostanti e acque cristalline.",
+    "title": "Spiaggia Sabbioni: informazioni utili",
+    "description": "Spiaggia Sabbioni, spesso cercata anche come Spiaggia dei Sabbioni, è la spiaggia libera più conosciuta di Riva del Garda sul Lago di Garda. Qui trovi foto aggiornate, info pratiche su parcheggio, servizi, accesso a piedi dal centro, esperienza per famiglie con bambini e consigli per organizzare al meglio la visita.",
     "highlights": [
       "Spiaggia di ghiaia libera con ampi spazi",
       "Vista panoramica sulle Alpi e il Lago di Garda",
@@ -35,8 +35,8 @@
     ]
   },
   "gallery": {
-    "title": "Galleria Fotografica",
-    "subtitle": "Scorci dalla Spiaggia Sabbioni e dintorni",
+    "title": "Foto della Spiaggia Sabbioni",
+    "subtitle": "Immagini del litorale, del lungolago e dell'area balneazione a Riva del Garda",
     "photos": [
       { "src": "https://images.unsplash.com/photo-1596627116790-af6f46dddbab?w=800&q=80", "caption": "Vista panoramica del Lago di Garda" },
       { "src": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80", "caption": "Acque cristalline della spiaggia" },
@@ -45,12 +45,12 @@
       { "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80", "caption": "Giornata estiva in spiaggia" },
       { "src": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80", "caption": "Sport acquatici sul lago" }
     ],
-    "sourceText": "Foto della Spiaggia Sabbioni scattate nel {year}.",
+    "sourceText": "Foto e panorami della Spiaggia Sabbioni aggiornati a ottobre {year}.",
     "viewAllOnMaps": "Vedi tutto su Google Maps"
   },
   "reviews": {
-    "title": "Recensioni dei Visitatori",
-    "declaration": "Valutazioni e recensioni provenienti da Google Maps (ultimo aggiornamento: 2026). Mostriamo solo una selezione di recensioni verificate con punteggio elevato. Per tutte le recensioni complete e aggiornate, clicca il link qui sotto.",
+    "title": "Recensioni della Spiaggia Sabbioni",
+    "declaration": "Valutazioni e recensioni provenienti da Google Maps (ultimo aggiornamento: ottobre 2026). La spiaggia mostra un punteggio di 4.6/5 su 6.465 recensioni. Qui sotto trovi una selezione di commenti utili per capire atmosfera, affollamento, panorama e servizi.",
     "moreReviews": "Vedi altre recensioni su Google Maps",
     "items": [
       { "name": "Marco R.", "date": "Agosto 2025", "stars": 5, "text": "Spiaggia bellissima con una vista spettacolare sulle montagne. Acqua pulita e cristallina. Perfetta per famiglie." },
@@ -64,21 +64,33 @@
     ]
   },
   "tips": {
-    "title": "Consigli per la Visita",
-    "subtitle": "Informazioni pratiche per goderti al meglio Spiaggia Sabbioni",
+    "title": "Parcheggio, servizi e consigli per la visita",
+    "subtitle": "Le informazioni pratiche più cercate prima di andare alla Spiaggia Sabbioni",
     "items": [
-      { "title": "Periodo migliore", "content": "Da giugno a settembre per il nuoto. Maggio e ottobre offrono meno folla e temperature piacevoli." },
-      { "title": "Come arrivare", "content": "A 5 minuti a piedi dal centro di Riva del Garda. Parcheggi disponibili nelle vicinanze." },
-      { "title": "Cosa portare", "content": "Scarpe da scoglio (spiaggia di ghiaia), crema solare, acqua. Ombrelloni e lettini a noleggio in loco." },
-      { "title": "Attività", "content": "Nuoto, windsurf, vela, stand-up paddle. Percorso lungolago ideale per passeggiate e ciclismo." },
-      { "title": "Sicurezza", "content": "Acque generalmente calme, adatte ai bambini. Attenzione alle imbarcazioni nelle zone più lontane dalla riva." },
-      { "title": "Dintorni", "content": "Visita il centro storico di Riva del Garda, la Rocca (museo civico), e le Cascate del Varone a pochi km." }
+      { "title": "Periodo migliore", "content": "Da giugno a settembre per fare il bagno, con maggio e ottobre utili se preferisci meno folla e temperature miti." },
+      { "title": "Parcheggio vicino", "content": "Nelle vicinanze ci sono posti auto e parcheggi a pagamento utili per raggiungere la spiaggia a piedi in pochi minuti, soprattutto arrivando in auto da fuori Riva del Garda." },
+      { "title": "Come arrivare", "content": "Dal centro di Riva del Garda si raggiunge facilmente con una passeggiata breve sul lungolago; comoda anche in bici." },
+      { "title": "Servizi in spiaggia", "content": "Sono disponibili servizi igienici, docce, aree relax e spazi adatti a una giornata al lago con amici o famiglia." },
+      { "title": "Famiglie e bambini", "content": "È una delle spiagge più frequentate dalle famiglie grazie alla posizione comoda, all'ampiezza dell'area e alle acque generalmente tranquille vicino a riva." },
+      { "title": "Cosa portare", "content": "Meglio avere scarpe da scoglio o da acqua, crema solare, acqua e tutto il necessario per una lunga sosta sulla spiaggia di ciottoli." }
     ]
   },
   "map": {
-    "title": "Come Raggiungerci",
+    "title": "Come arrivare alla Spiaggia Sabbioni",
     "address": "Via Cristoph Hartung Von Hartungen, 4, 38066 Riva del Garda TN, Italia",
     "openInMaps": "Apri in Google Maps"
+  },
+  "relatedGuides": {
+    "title": "Guide utili da consultare",
+    "subtitle": "Approfondimenti pensati per le ricerche più frequenti su Spiaggia Sabbioni e Riva del Garda",
+    "parkingTitle": "Parcheggio Spiaggia Sabbioni",
+    "parkingDescription": "Dove parcheggiare, quanto si cammina fino alla spiaggia e quali soluzioni valutare in alta stagione.",
+    "beachesTitle": "Spiagge a Riva del Garda",
+    "beachesDescription": "Confronto rapido tra Spiaggia Sabbioni, Pini Beach e altre spiagge del lago nei dintorni.",
+    "photosTitle": "Foto Spiaggia Sabbioni",
+    "photosDescription": "Una pagina dedicata alle foto della spiaggia, del lungolago e dei punti panoramici più utili.",
+    "reviewsTitle": "Recensioni Spiaggia Sabbioni",
+    "reviewsDescription": "Sintesi delle opinioni dei visitatori su panorama, affollamento, famiglie, ciottoli e qualità dell'esperienza."
   },
   "sources": {
     "title": "Dati e Riferimenti",

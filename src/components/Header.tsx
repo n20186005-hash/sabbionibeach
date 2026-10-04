@@ -1,10 +1,10 @@
-import { getLocale } from 'next-intl/server';
+import { useLocale } from 'next-intl';
 import LanguageToggle from './LanguageToggle';
 import ThemeToggle from './ThemeToggle';
 import { getLocalePath } from '@/lib/site';
 
-export default async function Header() {
-  const locale = await getLocale();
+export default function Header() {
+  const locale = useLocale();
 
   return (
     <header
