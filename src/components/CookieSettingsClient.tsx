@@ -1,16 +1,15 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { defaultLocale } from '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useState, useEffect } from 'react';
+import { getLocalePath } from '@/lib/site';
 
 export default function CookieSettingsClient() {
   const t = useTranslations('cookieSettings');
   const tNav = useTranslations('nav');
   const locale = useLocale();
-  const prefix = locale === defaultLocale ? '' : `/${locale}`;
 
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
@@ -40,7 +39,7 @@ export default function CookieSettingsClient() {
       <main className="pt-20 pb-16 px-4">
         <div className="max-w-3xl mx-auto">
           <a
-            href={`${prefix}/`}
+            href={getLocalePath(locale)}
             className="inline-flex items-center gap-2 mb-8 text-sm font-medium transition-colors"
             style={{ color: 'var(--accent)' }}
           >
