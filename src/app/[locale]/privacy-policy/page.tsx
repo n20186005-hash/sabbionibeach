@@ -1,17 +1,35 @@
-import { getTranslations } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
-import { defaultLocale } from '@/i18n/config';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { getLocaleAlternates, getLocalePath, getLocaleUrl, SITE_URL } from '@/lib/site';
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'privacy' });
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: t('title'),
+    description: `${t('title')} - ${SITE_URL.replace('https://www.', '')}`,
+    alternates: {
+      canonical: getLocaleUrl(locale, '/privacy-policy'),
+      languages: getLocaleAlternates('/privacy-policy'),
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
+  };
+}
 
 export default async function PrivacyPolicy({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('privacy');
   const tNav = await getTranslations('nav');
-  const prefix = locale === defaultLocale ? '' : `/${locale}`;
   const sections: { heading: string; content: string }[] = t.raw('sections');
 
   return (
@@ -20,7 +38,7 @@ export default async function PrivacyPolicy({ params }: Props) {
       <main className="pt-20 pb-16 px-4">
         <div className="max-w-3xl mx-auto">
           <a
-            href={`${prefix}/`}
+            href={getLocalePath(locale)}
             className="inline-flex items-center gap-2 mb-8 text-sm font-medium transition-colors"
             style={{ color: 'var(--accent)' }}
           >

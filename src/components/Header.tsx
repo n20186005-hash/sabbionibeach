@@ -1,7 +1,11 @@
+import { getLocale } from 'next-intl/server';
 import LanguageToggle from './LanguageToggle';
 import ThemeToggle from './ThemeToggle';
+import { getLocalePath } from '@/lib/site';
 
-export default function Header() {
+export default async function Header() {
+  const locale = await getLocale();
+
   return (
     <header
       className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md"
@@ -12,7 +16,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         <a
-          href="#"
+          href={getLocalePath(locale)}
           className="font-display text-lg tracking-tight"
           style={{ color: 'var(--text-primary)' }}
         >

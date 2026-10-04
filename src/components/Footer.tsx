@@ -1,11 +1,10 @@
 import { useTranslations, useLocale } from 'next-intl';
-import { defaultLocale } from '@/i18n/config';
+import { getLocalePath } from '@/lib/site';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
   const locale = useLocale();
-  const prefix = locale === defaultLocale ? '' : `/${locale}`;
 
   return (
     <footer
@@ -18,21 +17,21 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
           <a
-            href={`${prefix}/privacy-policy`}
+            href={getLocalePath(locale, '/privacy-policy')}
             className="transition-colors hover:underline"
             style={{ color: 'var(--text-muted)' }}
           >
             {tNav('privacy')}
           </a>
           <a
-            href={`${prefix}/terms-of-service`}
+            href={getLocalePath(locale, '/terms-of-service')}
             className="transition-colors hover:underline"
             style={{ color: 'var(--text-muted)' }}
           >
             {tNav('terms')}
           </a>
           <a
-            href={`${prefix}/cookie-settings`}
+            href={getLocalePath(locale, '/cookie-settings')}
             className="transition-colors hover:underline"
             style={{ color: 'var(--text-muted)' }}
           >

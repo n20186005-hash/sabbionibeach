@@ -2,9 +2,10 @@
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { locales, localeNames, defaultLocale } from '@/i18n/config';
+import { locales, localeNames } from '@/i18n/config';
 import type { Locale } from '@/i18n/config';
 import { useState, useRef, useEffect } from 'react';
+import { getLocalePath } from '@/lib/site';
 
 export default function LanguageToggle() {
   const locale = useLocale() as Locale;
@@ -32,7 +33,7 @@ export default function LanguageToggle() {
         break;
       }
     }
-    const newPath = newLocale === defaultLocale ? path : `/${newLocale}${path}`;
+    const newPath = path === '/' ? getLocalePath(newLocale) : getLocalePath(newLocale, path);
     router.push(newPath);
     setOpen(false);
   };

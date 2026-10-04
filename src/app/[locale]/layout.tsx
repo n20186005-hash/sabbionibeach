@@ -1,7 +1,8 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { locales, defaultLocale } from '@/i18n/config';
+import { locales } from '@/i18n/config';
 import type { Metadata } from 'next';
+import { getLocaleAlternates, getLocaleUrl, SITE_URL } from '@/lib/site';
 import '../globals.css';
 
 type Props = {
@@ -17,20 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const baseUrl = 'https://www.sabbionibeach.com';
-  const alternateLanguages: Record<string, string> = {};
-  
-  locales.forEach((loc) => {
-    alternateLanguages[loc] = loc === defaultLocale ? baseUrl : `${baseUrl}/${loc}`;
-  });
-  alternateLanguages['x-default'] = baseUrl;
-
   return {
+    metadataBase: new URL(SITE_URL),
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: locale === defaultLocale ? baseUrl : `${baseUrl}/${locale}`,
-      languages: alternateLanguages,
+      canonical: getLocaleUrl(locale),
+      languages: getLocaleAlternates(),
     },
   };
 }
