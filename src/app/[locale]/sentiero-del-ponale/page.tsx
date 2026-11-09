@@ -76,10 +76,10 @@ export default async function PonalePage({params}: Props) {
     <p className="text-lg leading-relaxed mb-10" style={{color:'var(--text-secondary)'}}>{c.intro}</p>
     <div className="space-y-10" style={{color:'var(--text-secondary)'}}>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{c.tipsTitle}</h2><ul className="list-disc pl-6 space-y-2">{c.tips.map(x=><li key={x}>{x}</li>)}</ul></section>
-      {[[c.featuresTitle,c.features],[c.aboutTitle,c.about],[c.basicsTitle,c.basics],[c.gettingTitle,c.getting]].map(([heading,body])=><section key={heading}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{heading}</h2><p className="leading-relaxed">{body}</p></section>)}
+      {[[c.featuresTitle,c.features],[c.aboutTitle,c.about],[c.basicsTitle,c.basics]].map(([heading,body])=><section key={heading}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{heading}</h2><p className="leading-relaxed">{body}</p></section>)}
+      <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{c.gettingTitle}</h2><p className="leading-relaxed">{c.getting}</p><a href="https://www.google.com/maps/search/?api=1&query=Via+Monte+Oro%2C+Riva+del+Garda" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 underline" style={{color:'var(--accent)'}}>{c.map}</a></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{c.routeTitle}</h2><ol className="list-decimal pl-6 space-y-2">{c.route.map(x=><li key={x}>{x}</li>)}</ol></section>
       {[[c.safetyTitle,c.safety],[c.photoTitle,c.photo],[c.sourcesTitle,c.sources]].map(([heading,body])=><section key={heading}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{heading}</h2><p className="leading-relaxed">{body}</p></section>)}
-      <p><a href="https://www.google.com/maps/search/?api=1&query=Via+Monte+Oro%2C+Riva+del+Garda" target="_blank" rel="noopener noreferrer" className="underline" style={{color:'var(--accent)'}}>{c.map}</a></p>
       <p><a href={source} target="_blank" rel="noopener noreferrer" className="underline" style={{color:'var(--accent)'}}>{c.official}</a></p>
     </div></div></main><Footer/></>;
 }
