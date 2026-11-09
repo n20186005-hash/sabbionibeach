@@ -1,3 +1,4 @@
+import VisitDetails from '@/components/VisitDetails';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { redirect } from 'next/navigation';
@@ -202,6 +203,7 @@ export default async function PhotosPage({ params }: Props) {
             </div>
           </section>
         </div>
+        <VisitDetails locale={locale} topic="photos" />
       </main>
       <Footer />
     </>

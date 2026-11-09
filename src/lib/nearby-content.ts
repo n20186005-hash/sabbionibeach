@@ -1,3 +1,4 @@
+import { piniPlace } from '@/lib/pini-content';
 /** Visitor information based on the Garda Trentino destination pages linked below.
  * Opening arrangements and prices may change; check the source before travel. */
 export const places = {
@@ -171,7 +172,7 @@ export const places = {
 export type NearbyPlace = (typeof places)[keyof typeof places];
 export type NearbySlug = keyof typeof places;
 
-export const nearbyPlaces = Object.entries(places).map(([key, place]) => ({
+export const nearbyPlaces: Array<typeof piniPlace> = Object.entries(places).map(([key, place]) => ({
   slug: key === 'rocca' ? 'rocca-mag' : key === 'varone' ? 'cascata-varone' : key,
   address: place.address,
   mapUrl: place.map,
@@ -187,3 +188,5 @@ export const nearbyPlaces = Object.entries(places).map(([key, place]) => ({
     experience: string; route: readonly string[]; safety: string; photography: string; accommodation: string;
   }>,
 }));
+
+nearbyPlaces.push(piniPlace);

@@ -7,6 +7,7 @@ import { locales, type Locale } from '@/i18n/config';
 import { getLocaleUrl, SITE_URL } from '@/lib/site';
 import { nearbyPlaces } from '@/lib/nearby-content';
 import { details, visitFacts } from '@/lib/nearby-details';
+import { piniDetails, piniFacts } from '@/lib/pini-content';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 const labels = {
@@ -29,7 +30,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 export default async function PlacePage({params}: Props) {
   const {locale,slug}=await params; const place=nearbyPlaces.find(p=>p.slug===slug); if (!place) notFound();
-  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=details[slug][lang]; const f=visitFacts[slug][lang]; const x=extraLabels[lang];
+  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=slug === 'spiaggia-dei-pini' ? piniDetails[lang] : details[slug][lang]; const f=slug === 'spiaggia-dei-pini' ? piniFacts[lang] : visitFacts[slug][lang]; const x=extraLabels[lang];
   return <><Header/><main className="pt-24 pb-20 px-4"><div className="max-w-5xl mx-auto">
     <a href={`/${locale}`} className="underline" style={{color:'var(--accent)'}}>← {l.back}</a>
     <div className="grid md:grid-cols-2 gap-8 items-center mt-8 mb-12">
