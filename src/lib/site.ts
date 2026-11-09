@@ -4,7 +4,7 @@ export const SITE_URL = 'https://www.sabbionibeach.com';
 export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/28r3jQBy9Cpd4M1C8';
 export const PLACE_NAME = 'Spiaggia Sabbioni';
 export const REVIEW_RATING = 4.6;
-export const REVIEW_COUNT = 6465;
+export const REVIEW_COUNT = 6495;
 export const topicSlugs = {
   parking: {
     it: '/parcheggio-spiaggia-sabbioni',
