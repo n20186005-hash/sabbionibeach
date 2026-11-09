@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import { locales, type Locale } from '@/i18n/config';
 import { getLocaleUrl, SITE_URL } from '@/lib/site';
 import { nearbyPlaces } from '@/lib/nearby-content';
-import { details } from '@/lib/nearby-details';
+import { details, visitFacts } from '@/lib/nearby-details';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 const labels = {
@@ -29,11 +29,11 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 export default async function PlacePage({params}: Props) {
   const {locale,slug}=await params; const place=nearbyPlaces.find(p=>p.slug===slug); if (!place) notFound();
-  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=details[slug][lang]; const x=extraLabels[lang];
+  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=details[slug][lang]; const f=visitFacts[slug][lang]; const x=extraLabels[lang];
   return <><Header/><main className="pt-24 pb-20 px-4"><div className="max-w-5xl mx-auto">
     <a href={`/${locale}`} className="underline" style={{color:'var(--accent)'}}>← {l.back}</a>
     <div className="grid md:grid-cols-2 gap-8 items-center mt-8 mb-12">
-      <div><p className="uppercase tracking-widest text-sm mb-3" style={{color:'var(--accent)'}}>{slug === 'cascata-varone' ? 'Tenno' : 'Riva del Garda'} · Garda Trentino</p><h1 className="font-display text-4xl md:text-5xl mb-4" style={{color:'var(--text-primary)'}}>{c.name}</h1><p className="text-xl mb-5" style={{color:'var(--text-secondary)'}}>{c.tagline}</p><p className="text-sm mb-4" style={{color:'var(--text-secondary)'}}><strong>{l.hours}: </strong>{c.hours}</p><a className="underline" href={place.mapUrl} target="_blank" rel="noopener noreferrer">{l.map} ↗</a></div>
+      <div><p className="uppercase tracking-widest text-sm mb-3" style={{color:'var(--accent)'}}>{slug === 'cascata-varone' ? 'Tenno' : 'Riva del Garda'} · Garda Trentino</p><h1 className="font-display text-4xl md:text-5xl mb-4" style={{color:'var(--text-primary)'}}>{c.name}</h1><p className="text-xl mb-5" style={{color:'var(--text-secondary)'}}>{c.tagline}</p><p className="text-sm mb-4" style={{color:'var(--text-secondary)'}}><strong>{l.hours}: </strong>{f.hours}</p><a className="underline" href={place.mapUrl} target="_blank" rel="noopener noreferrer">{l.map} ↗</a></div>
       <div className="rounded-2xl p-8" style={{background:'var(--card-bg)',border:'1px solid var(--border)'}}><h2 className="font-display text-2xl mb-4" style={{color:'var(--text-primary)'}}>{l.info}</h2><p className="mb-4">{place.address}</p><p>{c.tagline}</p><a href={place.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-5 underline">{l.map} ↗</a></div>
     </div>
     <div className="grid md:grid-cols-[1fr_280px] gap-12" style={{color:'var(--text-secondary)'}}><article className="space-y-10">
@@ -41,13 +41,13 @@ export default async function PlacePage({params}: Props) {
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.tips}</h2><ul className="list-disc pl-6 space-y-2">{c.tips.map(x=><li key={x}>{x}</li>)}</ul></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.highlights}</h2><p>{c.highlights}</p></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.about}</h2><p className="leading-relaxed mb-3">{c.about}</p><p className="leading-relaxed">{d.management}</p><a className="underline" href={d.managerSource} target="_blank" rel="noopener noreferrer">{x.managementSource} ↗</a></section>
-      {([[l.hours,c.hours],[l.price,c.price],[l.transport,c.transport],[l.experience,c.experience],[x.history,d.history],[x.visit,d.visit],[x.planning,d.planning]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
+      {([[l.hours,f.hours],[l.price,f.prices],[l.transport,c.transport],[l.experience,c.experience],[x.history,d.history],[x.visit,d.visit],[x.planning,d.planning]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.route}</h2><ol className="list-decimal pl-6 space-y-2">{c.route.map(x=><li key={x}>{x}</li>)}</ol></section>
       {([[l.safety,c.safety],[l.photo,c.photography],[l.stay,c.accommodation]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{x.reviews}</h2><p>{x.reviewsText}</p><a className="underline" href={place.mapUrl} target="_blank" rel="noopener noreferrer">{l.map} ↗</a></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.directions}</h2><p>{place.address}</p><a href={place.mapUrl} className="underline" target="_blank" rel="noopener noreferrer">{l.map} ↗</a></section>
-      <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.source}</h2><p>{l.sourceText}</p><a href={place.source} className="underline" target="_blank" rel="noopener noreferrer">Garda Trentino ↗</a></section>
+      <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.source}</h2><p>{l.sourceText}</p><a href={place.source} className="underline" target="_blank" rel="noopener noreferrer">Garda Trentino ↗</a> · <a href={f.source} className="underline" target="_blank" rel="noopener noreferrer">{l.hours} / {l.price} ↗</a></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.other}</h2><ul className="space-y-2"><li><a className="underline" href={`/${locale}/sentiero-del-ponale`}>Sentiero del Ponale →</a></li>{nearbyPlaces.filter(p=>p.slug!==slug).map(p=><li key={p.slug}><a className="underline" href={`/${locale}/places/${p.slug}`}>{p.content[lang].name} →</a></li>)}</ul></section>
-    </article><aside><div className="rounded-2xl p-6" style={{background:'var(--card-bg)',border:'1px solid var(--border)'}}><h2 className="font-display text-2xl mb-4" style={{color:'var(--text-primary)'}}>{l.info}</h2><dl className="space-y-4"><div><dt className="font-semibold">{l.address}</dt><dd>{place.address}</dd></div><div><dt className="font-semibold">{l.hours}</dt><dd>{c.hours}</dd></div><div><dt className="font-semibold">{l.price}</dt><dd>{c.price}</dd></div></dl></div></aside></div>
+    </article><aside><div className="rounded-2xl p-6" style={{background:'var(--card-bg)',border:'1px solid var(--border)'}}><h2 className="font-display text-2xl mb-4" style={{color:'var(--text-primary)'}}>{l.info}</h2><dl className="space-y-4"><div><dt className="font-semibold">{l.address}</dt><dd>{place.address}</dd></div><div><dt className="font-semibold">{l.hours}</dt><dd>{f.hours}</dd></div><div><dt className="font-semibold">{l.price}</dt><dd>{f.prices}</dd></div></dl></div></aside></div>
   </div></main><Footer/></>;
 }
