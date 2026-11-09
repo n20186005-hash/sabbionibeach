@@ -9,6 +9,8 @@ import MapEmbed from '@/components/MapEmbed';
 import Sources from '@/components/Sources';
 import Footer from '@/components/Footer';
 import { getLocaleUrl, getTopicPath, GOOGLE_MAPS_URL, PLACE_NAME } from '@/lib/site';
+import { nearbyPlaces } from '@/lib/nearby-content';
+import type { Locale } from '@/i18n/config';
 
 type Props = { params: Promise<{ locale: string }> };
 const getLocalePathForPonale = (locale: string) => `/${locale}/sentiero-del-ponale`;
@@ -71,6 +73,12 @@ export default async function HomePage({ params }: Props) {
             <a href={getLocalePathForPonale(locale)} className="block mb-6 p-6 rounded-2xl" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', color: 'var(--text-primary)' }}>
               {({it: 'Sentiero del Ponale: guida alla visita', en: 'Ponale Trail: visitor guide', de: 'Ponale-Weg: Tipps für den Besuch', 'zh-Hant': 'Ponale 步道遊覽指南'} as Record<string, string>)[locale] || 'Ponale Trail: visitor guide'} →
             </a>
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              {nearbyPlaces.map(place => <a key={place.slug} href={`/${locale}/places/${place.slug}`} className="block p-6 rounded-2xl transition-transform hover:-translate-y-1" style={{background:'var(--card-bg)',border:'1px solid var(--border)',color:'var(--text-primary)'}}>
+                <h3 className="font-semibold text-lg mb-2">{place.content[(locale in place.content ? locale : 'en') as Locale].name} →</h3>
+                <p className="text-sm" style={{color:'var(--text-secondary)'}}>{place.content[(locale in place.content ? locale : 'en') as Locale].tagline}</p>
+              </a>)}
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={getTopicPath(locale, 'parking')}
