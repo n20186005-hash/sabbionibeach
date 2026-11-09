@@ -14,11 +14,6 @@ const labels = {
   de: {back:'Spiaggia Sabbioni', explore:'Entdecken', tips:'Tipps für den Besuch', highlights:'Highlights', about:'Über den Ort', info:'Praktische Informationen', address:'Adresse', hours:'Öffnungszeiten', price:'Eintritt und Preise', transport:'Anreise', experience:'Den Ort entdecken', route:'Routenvorschlag', safety:'Gut zu wissen', photo:'Fotografieren', stay:'Übernachten', directions:'Adresse und Karte', map:'Karte öffnen', source:'Quelle und Aktualität', sourceText:'Aktuelle Öffnungszeiten, Preise und Bedingungen bei Garda Trentino prüfen. Informationen geprüft am 9. November 2026.', other:'Weitere Ziele in der Nähe'},
   'zh-Hant': {back:'返回 Sabbioni 湖灘', explore:'探索', tips:'遊覽建議', highlights:'景點特色', about:'關於景點', info:'基本資訊', address:'地址', hours:'開放時間', price:'門票價格', transport:'交通方式', experience:'發現魅力', route:'遊覽路線', safety:'遊覽須知', photo:'拍照建議', stay:'住宿建議', directions:'地址與地圖', map:'開啟地圖', source:'資料來源與更新', sourceText:'出發前請向 Garda Trentino 查詢最新開放時間、價格及現場狀況。資料查核於 2026 年 11 月 9 日。', other:'更多周邊景點'},
 } as const;
-const photos: Record<string, {file:string; author:string; license:string; code:string}> = {
-  bastione: {file:'Bastione - Riva del Garda.jpg',author:'Robertk9410',license:'https://creativecommons.org/licenses/by-sa/4.0/',code:'CC BY-SA 4.0'},
-  'rocca-mag': {file:'Riva del Garda - The Fort - Museo (4880083067).jpg',author:'Elliott Brown',license:'https://creativecommons.org/licenses/by/2.0/',code:'CC BY 2.0'},
-  'cascata-varone': {file:'Cascata Varone - waterfall.jpg',author:'H. Zell',license:'https://creativecommons.org/licenses/by-sa/3.0/',code:'CC BY-SA 3.0'},
-};
 export function generateStaticParams() { return nearbyPlaces.map(({slug}) => ({slug})); }
 export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale,slug}=await params; const place=nearbyPlaces.find(p=>p.slug===slug); if (!place) return {};
@@ -27,13 +22,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 export default async function PlacePage({params}: Props) {
   const {locale,slug}=await params; const place=nearbyPlaces.find(p=>p.slug===slug); if (!place) notFound();
-  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const photo=photos[slug];
-  const commons=`https://commons.wikimedia.org/wiki/File:${encodeURIComponent(photo.file)}`;
+  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang];
   return <><Header/><main className="pt-24 pb-20 px-4"><div className="max-w-5xl mx-auto">
     <a href={`/${locale}`} className="underline" style={{color:'var(--accent)'}}>← {l.back}</a>
     <div className="grid md:grid-cols-2 gap-8 items-center mt-8 mb-12">
       <div><p className="uppercase tracking-widest text-sm mb-3" style={{color:'var(--accent)'}}>{slug === 'cascata-varone' ? 'Tenno' : 'Riva del Garda'} · Garda Trentino</p><h1 className="font-display text-4xl md:text-5xl mb-4" style={{color:'var(--text-primary)'}}>{c.name}</h1><p className="text-xl mb-5" style={{color:'var(--text-secondary)'}}>{c.tagline}</p><p className="text-sm mb-4" style={{color:'var(--text-secondary)'}}><strong>{l.hours}: </strong>{c.hours}</p><a className="underline" href={place.mapUrl} target="_blank" rel="noopener noreferrer">{l.map} ↗</a></div>
-      <figure><img src={`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(photo.file)}?width=960`} alt={c.name} className="w-full h-72 object-cover rounded-2xl"/><figcaption className="text-xs mt-2" style={{color:'var(--text-muted)'}}><a href={commons}>{photo.author}</a> · <a href={photo.license}>{photo.code}</a> · Wikimedia Commons</figcaption></figure>
+      <div className="rounded-2xl p-8" style={{background:'var(--card-bg)',border:'1px solid var(--border)'}}><h2 className="font-display text-2xl mb-4" style={{color:'var(--text-primary)'}}>{l.info}</h2><p className="mb-4">{place.address}</p><p>{c.tagline}</p><a href={place.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-5 underline">{l.map} ↗</a></div>
     </div>
     <div className="grid md:grid-cols-[1fr_280px] gap-12" style={{color:'var(--text-secondary)'}}><article className="space-y-10">
       <section><h2 className="font-display text-3xl mb-3" style={{color:'var(--text-primary)'}}>{l.explore}</h2><p className="leading-relaxed">{c.intro}</p></section>
