@@ -7,6 +7,7 @@ import { locales, type Locale } from '@/i18n/config';
 import { getLocaleUrl, SITE_URL } from '@/lib/site';
 import { nearbyPlaces } from '@/lib/nearby-content';
 import { details, visitFacts } from '@/lib/nearby-details';
+import { piniDetails, piniFacts } from '@/lib/pini-content';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 const labels = {
@@ -29,7 +30,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 export default async function PlacePage({params}: Props) {
   const {locale,slug}=await params; const place=nearbyPlaces.find(p=>p.slug===slug); if (!place) notFound();
-  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=details[slug][lang]; const f=visitFacts[slug][lang]; const x=extraLabels[lang];
+  setRequestLocale(locale); const lang=(locale in labels ? locale : 'en') as Locale; const l=labels[lang]; const c=place.content[lang]; const d=slug === 'spiaggia-dei-pini' ? piniDetails[lang] : details[slug][lang]; const f=slug === 'spiaggia-dei-pini' ? piniFacts[lang] : visitFacts[slug][lang]; const x=extraLabels[lang];
   return <><Header/><main className="pt-24 pb-20 px-4"><div className="max-w-5xl mx-auto">
     <a href={`/${locale}`} className="underline" style={{color:'var(--accent)'}}>← {l.back}</a>
     <div className="grid md:grid-cols-2 gap-8 items-center mt-8 mb-12">
@@ -41,7 +42,7 @@ export default async function PlacePage({params}: Props) {
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.tips}</h2><ul className="list-disc pl-6 space-y-2">{c.tips.map(x=><li key={x}>{x}</li>)}</ul></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.highlights}</h2><p>{c.highlights}</p></section>
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.about}</h2><p className="leading-relaxed mb-3">{c.about}</p><p className="leading-relaxed">{d.management}</p><a className="underline" href={d.managerSource} target="_blank" rel="noopener noreferrer">{x.managementSource} ↗</a></section>
-      {([[l.hours,f.hours],[l.price,f.prices],[l.transport,c.transport],[l.experience,c.experience],[x.history,d.history],[x.visit,d.visit],[x.planning,d.planning]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
+      {([[l.hours,f.hours],[l.price,f.prices],[l.transport,c.transport],[l.experience,c.experience],[slug === 'spiaggia-dei-pini' ? ({it:'Posizione e acque di balneazione',en:'Location and bathing water',de:'Lage und Badegewässer','zh-Hant':'位置與游泳水域'} as Record<Locale,string>)[lang] : x.history,d.history],[x.visit,d.visit],[x.planning,d.planning]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{l.route}</h2><ol className="list-decimal pl-6 space-y-2">{c.route.map(x=><li key={x}>{x}</li>)}</ol></section>
       {([[l.safety,c.safety],[l.photo,c.photography],[l.stay,c.accommodation]] as [string,string][]).map(([title,body])=><section key={title}><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{title}</h2><p className="leading-relaxed">{body}</p></section>)}
       <section><h2 className="font-display text-2xl mb-3" style={{color:'var(--text-primary)'}}>{x.reviews}</h2><p>{x.reviewsText}</p><a className="underline" href={place.mapUrl} target="_blank" rel="noopener noreferrer">{l.map} ↗</a></section>
