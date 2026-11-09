@@ -10,6 +10,7 @@ import Sources from '@/components/Sources';
 import Footer from '@/components/Footer';
 import { getLocaleUrl, getTopicPath, GOOGLE_MAPS_URL, PLACE_NAME } from '@/lib/site';
 import { nearbyPlaces } from '@/lib/nearby-content';
+import { guides } from '@/lib/expansion-content';
 import type { Locale } from '@/i18n/config';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -79,6 +80,7 @@ export default async function HomePage({ params }: Props) {
                 <p className="text-sm" style={{color:'var(--text-secondary)'}}>{place.content[(locale in place.content ? locale : 'en') as Locale].tagline}</p>
               </a>)}
             </div>
+            <div className="grid md:grid-cols-2 gap-4 mb-8">{guides.map(guide => <a key={guide.slug} href={`/${locale}/guides/${guide.slug}`} className="block p-6 rounded-2xl" style={{background:'var(--card-bg)',border:'1px solid var(--border)',color:'var(--text-primary)'}}><h3 className="font-semibold text-lg mb-2">{guide.copy[(locale in guide.copy ? locale : 'en') as Locale].title} →</h3><p className="text-sm" style={{color:'var(--text-secondary)'}}>{guide.copy[(locale in guide.copy ? locale : 'en') as Locale].tagline}</p></a>)}</div>
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={getTopicPath(locale, 'parking')}
