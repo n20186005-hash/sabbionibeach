@@ -1,3 +1,4 @@
+// Preview validation branch.
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
