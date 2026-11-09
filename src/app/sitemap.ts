@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 1,
     },
+    { url: getLocaleUrl(locale, '/sentiero-del-ponale'), lastModified: new Date('2026-11-09'), changeFrequency: 'monthly' as const, priority: 0.7 },
     ...topics.map((topic) => ({
       url: getTopicUrl(locale, topic),
       lastModified: new Date('2026-10-04'),

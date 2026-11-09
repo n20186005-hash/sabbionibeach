@@ -8,9 +8,10 @@ import Tips from '@/components/Tips';
 import MapEmbed from '@/components/MapEmbed';
 import Sources from '@/components/Sources';
 import Footer from '@/components/Footer';
-import { getLocaleUrl, getTopicPath, GOOGLE_MAPS_URL, PLACE_NAME, REVIEW_COUNT, REVIEW_RATING } from '@/lib/site';
+import { getLocaleUrl, getTopicPath, GOOGLE_MAPS_URL, PLACE_NAME } from '@/lib/site';
 
 type Props = { params: Promise<{ locale: string }> };
+const getLocalePathForPonale = (locale: string) => `/${locale}/sentiero-del-ponale`;
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
@@ -36,13 +37,7 @@ export default async function HomePage({ params }: Props) {
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 45.8812511,
-      longitude: 10.8464442,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: REVIEW_RATING,
-      reviewCount: REVIEW_COUNT,
-      bestRating: 5,
+      longitude: 10.8490191,
     },
     sameAs: [GOOGLE_MAPS_URL],
   };
@@ -73,6 +68,9 @@ export default async function HomePage({ params }: Props) {
               <p style={{ color: 'var(--text-muted)' }}>{tRelated('subtitle')}</p>
             </div>
 
+            <a href={getLocalePathForPonale(locale)} className="block mb-6 p-6 rounded-2xl" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', color: 'var(--text-primary)' }}>
+              {({it: 'Sentiero del Ponale: guida alla visita', en: 'Ponale Trail: visitor guide', de: 'Ponale-Weg: Tipps für den Besuch', 'zh-Hant': 'Ponale 步道遊覽指南'} as Record<string, string>)[locale] || 'Ponale Trail: visitor guide'} →
+            </a>
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={getTopicPath(locale, 'parking')}
